@@ -1,0 +1,49 @@
+a:link {  
+color: #333333; 
+text-decoration: underline
+}
+
+a:visited {  
+color: #333333; 
+text-decoration: underline
+}
+
+a:hover {  
+color: #333333; 
+text-decoration: none
+}
+
+.logo {  font-family: Verdana, Arial, Helvetica, sans-serif; 
+font-size: 26px; 
+font-weight: bold; 
+color: #00FF99
+}
+
+.text {  
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+font-size: 12px; 
+color: #333333
+}
+
+.title {  font-family: Verdana, Arial, Helvetica, sans-serif
+; font-size: 18px; 
+font-weight: 
+bold; color: #993300
+}
+
+.subtitle {  
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+font-size: 14px; 
+font-weight: bold; 
+color: #993300
+}
+
+.menutitle {  font-family: Verdana, Arial, Helvetica, sans-serif; 
+font-size: 12px;  
+color: #993300
+}
+
+
+
+
+
