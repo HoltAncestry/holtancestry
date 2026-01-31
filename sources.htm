@@ -35,25 +35,24 @@
 
     <p>&nbsp;</p>
 
-    <!-- LIGHT BROWN BOX (same as Contact page) -->
-    <div class="infobox">
-      <p>
-        <span class="subtitle">Sources</span><br /><br />
+<!-- Sidebar content moved below main content on mobile -->
+  <aside class="sidebar">
 
-        <a href="links.htm"><span class="menutitle">Links</span></a><br />
-        <a href="reference.htm"><span class="menutitle">Reference</span></a><br />
-        <a href="contact.htm"><span class="menutitle">Contact</span></a><br />
-        <a href="sitemap.htm"><span class="menutitle">Sitemap</span></a><br /><br />
+    <h2 class="subtitle">Sources</h2>
+    <ul class="sidebar-menu">
+      <li><a href="links.htm" class="menutitle">Links</a></li>
+      <li><a href="reference.htm" class="menutitle">Reference</a></li>
+      <li><a href="contact.htm" class="menutitle">Contact</a></li>
+      <li><a href="sitemap.htm" class="menutitle">Sitemap</a></li>
+    </ul>
 
-        <!-- Search box exactly like Contact -->
-        <form method="get" action="https://www.google.com/search">
-          <input type="text" name="q" size="17" maxlength="255" value="" />
-          <input type="submit" value="Google Search" /><br />
-          <input type="checkbox" name="sitesearch" value="holtancestry.co.uk" checked="checked" />
-          only search Holt Ancestry
-        </form>
-      </p>
-    </div>
+    <form method="get" action="https://www.google.com/search" class="search-box">
+      <input type="text" name="q" placeholder="Search Holt Ancestry">
+      <input type="hidden" name="sitesearch" value="holtancestry.co.uk">
+      <button type="submit">Search</button>
+    </form>
+
+  </aside>
 
   </section>
 </main>
