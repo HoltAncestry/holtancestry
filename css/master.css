@@ -152,3 +152,61 @@ img {
 }
 
 .search-box
+
+/* -----------------------------------------------------------
+   HERITAGE MODERN DESIGN LAYER
+   ----------------------------------------------------------- */
+
+/* Soft parchment background */
+body {
+  background: #f7f3ee; /* warm, archival tone */
+}
+
+/* Header bar with subtle heritage feel */
+header {
+  background: #f0e8df; /* slightly darker parchment */
+  border-bottom: 2px solid #d6c7b8;
+  padding: 0.5rem 0;
+}
+
+/* Navigation refinement */
+.main-nav {
+  gap: 2rem;
+}
+
+.main-nav .nav-link {
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+}
+
+/* Main content panel */
+.container {
+  background: #ffffff;
+  padding: 2rem;
+  border: 1px solid #e0d6cc;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-top: 2rem;
+}
+
+/* Sidebar as a heritage card */
+.sidebar {
+  background: #faf6f2;
+  border: 1px solid #e0d6cc;
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin-top: 3rem;
+}
+
+/* Sidebar headings */
+.sidebar .subtitle {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer refinement */
+footer {
+  background: #f0e8df;
+  border-top: 2px solid #d6c7b8;
+  margin-top: 3rem;
+  padding: 1.5rem 1rem;
+}
