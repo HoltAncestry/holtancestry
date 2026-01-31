@@ -1,48 +1,24 @@
-a:link {  
-color: #333333; 
-text-decoration: underline;
+/* -----------------------------------------------------------
+   GLOBAL LINK STYLES (legacy pages still rely on these)
+   ----------------------------------------------------------- */
+a:link {
+  color: #333333;
+  text-decoration: underline;
 }
 
-a:visited {  
-color: #333333; 
-text-decoration: underline;
+a:visited {
+  color: #333333;
+  text-decoration: underline;
 }
 
-a:hover {  
-color: #333333; 
-text-decoration: none
+a:hover {
+  color: #333333;
+  text-decoration: none;
 }
 
-.logo {  font-family: Verdana, Arial, Helvetica, sans-serif; 
-font-size: 2rem; 
-font-weight: bold; 
-color: #00FF99
-}
-
-.text {  
-font-family: Verdana, Arial, Helvetica, sans-serif; 
-font-size: 1rem; /* roughly 16px */ 
-color: #333333;
-}
-
-.title {  font-family: Verdana, Arial, Helvetica, sans-serif;
-; font-size: 1.5rem; 
-font-weight: bold; 
-color: #993300
-}
-
-.subtitle {  
-font-family: Verdana, Arial, Helvetica, sans-serif; 
-font-size: 1.25rem; 
-font-weight: bold; 
-color: #993300
-}
-
-.menutitle {  font-family: Verdana, Arial, Helvetica, sans-serif; 
-font-size: 1rem;  
-color: #993300
-}
-
+/* -----------------------------------------------------------
+   TYPOGRAPHY
+   ----------------------------------------------------------- */
 body {
   margin: 0;
   padding: 0;
@@ -51,47 +27,95 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.text {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #333333;
+}
+
+.title {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #993300;
+}
+
+.subtitle {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #993300;
+}
+
+.menutitle {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #993300;
+}
+
+.logo {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00FF99;
+}
+
+/* -----------------------------------------------------------
+   IMAGES
+   ----------------------------------------------------------- */
 img {
   max-width: 100%;
   height: auto;
 }
 
-
+/* -----------------------------------------------------------
+   SPACING UTILITIES
+   ----------------------------------------------------------- */
 .mt-1 { margin-top: 1rem; }
 .mb-1 { margin-bottom: 1rem; }
 .p-1  { padding: 1rem; }
 
-
-/* Navigation */
+/* -----------------------------------------------------------
+   NAVIGATION (modern)
+   ----------------------------------------------------------- */
 .main-nav {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.5rem;
   padding: 1rem 0;
   border-bottom: 1px solid #ddd;
   flex-wrap: wrap;
 }
 
-.nav-link {
-  color: #993300;
-  text-decoration: none;
+/* Override global link rules */
+.main-nav .nav-link {
+  color: #993300 !important;
+  text-decoration: none !important;
   font-weight: 600;
-  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.75rem;
+  display: inline-block;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: #662200;
-  text-decoration: underline;
+.main-nav .nav-link:hover,
+.main-nav .nav-link:focus {
+  color: #662200 !important;
+  text-decoration: underline !important;
 }
 
-/* Layout */
+/* -----------------------------------------------------------
+   LAYOUT CONTAINER
+   ----------------------------------------------------------- */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
 }
 
+/* -----------------------------------------------------------
+   SIDEBAR (now appears below content on mobile)
+   ----------------------------------------------------------- */
 .sidebar {
   margin-top: 2rem;
 }
@@ -105,7 +129,9 @@ img {
   margin-bottom: 0.5rem;
 }
 
-/* Search box */
+/* -----------------------------------------------------------
+   SEARCH BOX (modern)
+   ----------------------------------------------------------- */
 .search-box {
   margin-top: 1rem;
   display: flex;
@@ -125,6 +151,4 @@ img {
   cursor: pointer;
 }
 
-.search-box button:hover {
-  background: #662200;
-}
+.search-box
