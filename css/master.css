@@ -60,3 +60,71 @@ img {
 .mt-1 { margin-top: 1rem; }
 .mb-1 { margin-bottom: 1rem; }
 .p-1  { padding: 1rem; }
+
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #993300;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #662200;
+  text-decoration: underline;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.sidebar {
+  margin-top: 2rem;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 0.5rem;
+}
+
+/* Search box */
+.search-box {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-box input[type="text"] {
+  flex: 1;
+  padding: 0.4rem;
+}
+
+.search-box button {
+  padding: 0.4rem 0.8rem;
+  background: #993300;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background: #662200;
+}
