@@ -210,3 +210,39 @@ footer {
   margin-top: 3rem;
   padding: 1.5rem 1rem;
 }
+
+/* Make reference page section headings brown */
+.navblock h2,
+.content h2 {
+    color: #993300;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+/* Reference page layout (matches sources.htm proportions) */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+/* Left navigation block */
+.navblock {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+/* Main content column */
+.content {
+    flex: 1;
+    max-width: 700px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    flex-shrink: 0;
+}
