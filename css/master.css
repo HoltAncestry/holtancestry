@@ -256,29 +256,34 @@ footer {
 /* -----------------------------------------------------------
    Three Images in a row
    ----------------------------------------------------------- */
-
 .three-image-row {
   display: flex;
   justify-content: space-between;
-  gap: 1.5rem;
-  margin: 2rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .three-image-row figure {
-  flex: 1;
+  flex: 1 1 calc(33.333% - 1rem);
+  margin: 0;
   text-align: center;
 }
 
 .three-image-row img {
   width: 100%;
   height: auto;
-  border: 1px solid #e0d6cc;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  object-fit: cover;
+  display: block;
+  border-radius: 4px; /* optional */
 }
 
-.three-image-row figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #666;
+/* Mobile: stack images full width */
+@media (max-width: 768px) {
+  .three-image-row {
+    flex-direction: column;
+  }
+
+  .three-image-row figure {
+    flex: 1 1 100%;
+  }
 }
