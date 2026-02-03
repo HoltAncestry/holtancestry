@@ -319,3 +319,10 @@ footer {
   min-width: 860px; /* your actual table width */
 }
 
+/* -----------------------------------------------------------
+   Shield icons: no baseline gap, small spacing below
+   ----------------------------------------------------------- */
+img[name^="img"] {
+  display: block;
+  margin-bottom: 4px;
+}
