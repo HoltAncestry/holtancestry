@@ -304,3 +304,18 @@ footer {
     height: auto;
   }
 }
+
+/* -----------------------------------------------------------
+   WILLS (table scrolling on mobile)
+   ----------------------------------------------------------- */
+
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+
+.table-scroll table {
+  min-width: 860px; /* your actual table width */
+}
+
