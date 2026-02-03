@@ -256,6 +256,7 @@ footer {
 /* -----------------------------------------------------------
    Three Images in a row
    ----------------------------------------------------------- */
+/* --- Three images in a row --- */
 .three-image-row {
   display: flex;
   justify-content: space-between;
@@ -267,23 +268,39 @@ footer {
   flex: 1 1 calc(33.333% - 1rem);
   margin: 0;
   text-align: center;
+  position: relative; /* ensures caption layers correctly */
 }
 
 .three-image-row img {
   width: 100%;
   height: auto;
-  object-fit: cover;
   display: block;
-  border-radius: 4px; /* optional */
+  object-fit: cover;
 }
 
-/* Mobile: stack images full width */
+/* Captions must always sit below the image */
+.three-image-row figcaption {
+  position: relative;
+  z-index: 2;
+  background: white; /* prevents text blending into image */
+  padding-top: 0.5rem;
+  font-weight: 600;
+}
+
+/* --- Mobile layout --- */
 @media (max-width: 768px) {
   .three-image-row {
     flex-direction: column;
+    gap: 1.5rem;
   }
 
   .three-image-row figure {
     flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .three-image-row img {
+    width: 100%;
+    height: auto;
   }
 }
