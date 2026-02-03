@@ -322,9 +322,14 @@ footer {
 /* -----------------------------------------------------------
    Shield icons: no baseline gap, small spacing below
    ----------------------------------------------------------- */
-img[name^="img"] {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  margin-right: 6px !important;
-  line-height: 1 !important;
+a img[name^="img"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+  text-decoration: none;
+  border: none;
+}
+
+a img[name^="img"] + * {
+  text-decoration: none;
 }
