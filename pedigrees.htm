@@ -12,25 +12,57 @@
   <link rel="shortcut icon" href="favicon.ico">
 
 <!-- ROLL OVER SCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Find all rollover images
-  const rollovers = document.querySelectorAll("img[data-rollover]");
-
-  rollovers.forEach(img => {
-    const original = img.src;
-    const hover = img.dataset.rollover;
-
-    img.addEventListener("mouseover", () => {
-      img.src = hover;
-    });
-
-    img.addEventListener("mouseout", () => {
-      img.src = original;
-    });
-  });
-});
+<script type="text/javascript">
+if (document.images) {
+  bullet = new Array ();
+  bullet[1]= new Image(); bullet[1].src = "images/shield.jpg";
+  bullet[2]= new Image(); bullet[2].src = "images/shield2.jpg";
+  bullet[3]= new Image(); bullet[3].src = "images/shield.jpg";
+  bullet[4]= new Image(); bullet[4].src = "images/shield2.jpg";
+  bullet[5]= new Image(); bullet[5].src = "images/shield.jpg";
+  bullet[6]= new Image(); bullet[6].src = "images/shield2.jpg";
+  bullet[7]= new Image(); bullet[7].src = "images/shield.jpg";
+  bullet[8]= new Image(); bullet[8].src = "images/shield2.jpg";
+  bullet[9]= new Image(); bullet[9].src = "images/shield.jpg";
+  bullet[10]= new Image(); bullet[10].src = "images/shield2.jpg";
+  bullet[11]= new Image(); bullet[11].src = "images/shield.jpg";
+  bullet[12]= new Image(); bullet[12].src = "images/shield2.jpg";
+  bullet[13]= new Image(); bullet[13].src = "images/shield.jpg";
+  bullet[14]= new Image(); bullet[14].src = "images/shield2.jpg";
+  bullet[15]= new Image(); bullet[15].src = "images/shield.jpg";
+  bullet[16]= new Image(); bullet[16].src = "images/shield2.jpg";
+  bullet[17]= new Image(); bullet[17].src = "images/shield.jpg";
+  bullet[18]= new Image(); bullet[18].src = "images/shield2.jpg";
+  bullet[19]= new Image(); bullet[19].src = "images/shield.jpg";
+  bullet[20]= new Image(); bullet[20].src = "images/shield2.jpg";
+  bullet[21]= new Image(); bullet[21].src = "images/shield.jpg";
+  bullet[22]= new Image(); bullet[22].src = "images/shield2.jpg";
+  bullet[23]= new Image(); bullet[23].src = "images/shield.jpg";
+  bullet[24]= new Image(); bullet[24].src = "images/shield2.jpg";
+  bullet[25]= new Image(); bullet[25].src = "images/shield.jpg";
+  bullet[26]= new Image(); bullet[26].src = "images/shield2.jpg";
+  bullet[27]= new Image(); bullet[27].src = "images/shield.jpg";
+  bullet[28]= new Image(); bullet[28].src = "images/shield2.jpg";
+  bullet[29]= new Image(); bullet[29].src = "images/shield.jpg";
+  bullet[30]= new Image(); bullet[30].src = "images/shield2.jpg";
+  bullet[31]= new Image(); bullet[31].src = "images/shield.jpg";
+  bullet[32]= new Image(); bullet[32].src = "images/shield2.jpg";
+  bullet[33]= new Image(); bullet[33].src = "images/shield.jpg";
+  bullet[34]= new Image(); bullet[34].src = "images/shield2.jpg";
+  bullet[35]= new Image(); bullet[35].src = "images/shield.jpg";
+  bullet[36]= new Image(); bullet[36].src = "images/shield2.jpg";
+  bullet[37]= new Image(); bullet[37].src = "images/shield.jpg";
+  bullet[38]= new Image(); bullet[38].src = "images/shield2.jpg";
+  bullet[39]= new Image(); bullet[39].src = "images/shield.jpg";
+  bullet[40]= new Image(); bullet[40].src = "images/shield2.jpg";
+}
+function change(from,to)  {
+  if(document.images)  {
+    document.images[from].src = bullet[to].src;
+  }
+}
 </script>
+
 
 
 
@@ -114,16 +146,10 @@ and they have issue Fraunces, Raffe and Ric.
 </p>
 
 <p class="text">
-<a href="pdf/benalt-gristlehurst.pdf" target="_blank">
-  <img 
-    src="images/shield.jpg"
-    data-rollover="images/shield2.jpg"
-    width="34"
-    height="40"
-    alt="gristlehurst pedigree"
-  >
-</a>
-ARMS quarterly of five<br>
+<a href="pdf/benalt-gristlehurst.pdf" target="_blank" onmouseover="change('img1',2)" onmouseout="change('img1',1)">
+  <img name="img1" border="0" src="images/shield.jpg" alt="gristlehurst pedigree" align="middle" width="34" height="40">
+</a>ARMS quarterly of five<br>
+</p>
 FIRST argent (AR) on a fesse engrailed sable (S);
 three fleurs-de-lis of the field (AR) (HOLT of Stubley)<br>
 SECOND argent (A) three boars two and one sable (S)
