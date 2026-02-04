@@ -334,3 +334,27 @@ a img[src="images/shield2.jpg"] {
 p.text > a {
   text-decoration: none !important;
 }
+
+
+/* -----------------------------------------------------------
+   Gravestones
+   ----------------------------------------------------------- */
+
+.gravestone-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.gravestone-row figure {
+  width: 120px;
+  text-align: center;
+}
+
+.gravestone-row img {
+  width: 100%;
+  height: auto;
+  border: none;
+}   
