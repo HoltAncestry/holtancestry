@@ -330,3 +330,7 @@ a img[src="images/shield2.jpg"] {
   border: none !important;
   text-decoration: none !important;
 }
+
+p.text > a {
+  text-decoration: none !important;
+}
