@@ -357,4 +357,31 @@ p.text > a {
   width: 100%;
   height: auto;
   border: none;
-}   
+}
+
+/* -----------------------------------------------------------
+   Gravestones pop up boxes
+   ----------------------------------------------------------- */
+
+   html, body {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+body {
+  max-width: 700px;       /* adjust to your preferred width */
+  margin: 0 auto;         /* centres the content on desktop */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100% !important; /* forces tables to scale to window width */
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
