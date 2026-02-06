@@ -9,41 +9,23 @@
 <link rel="stylesheet" href="css/master.css">
 
 <style>
-  body {
-    margin: 0;
+  /* Responsive override without breaking your template */
+  .popup-wrapper {
+    max-width: 760px;      /* matches your old table width */
+    margin: 0 auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
-    max-width: 700px;       /* perfect for desktop */
-    margin-left: auto;
-    margin-right: auto;
     box-sizing: border-box;
   }
 
-  .popup-container {
-    width: 100%;
-  }
-
-  .title {
-    font-size: 1.4rem;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .close-btn {
-    text-align: right;
-    margin-bottom: 15px;
+  body {
+    margin: 0;
+    padding: 0;
   }
 
   .close-btn img {
     width: 28px;
     height: auto;
     cursor: pointer;
-  }
-
-  .text {
-    font-size: 1rem;
-    line-height: 1.5;
   }
 
   .center {
@@ -55,9 +37,9 @@
 
 <body>
 
-<div class="popup-container">
+<div class="popup-wrapper">
 
-  <div class="close-btn">
+  <div class="close-btn" style="text-align:right;">
     <a href="javascript:window.close();">
       <img src="images/close.jpg" alt="close">
     </a>
