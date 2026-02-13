@@ -358,3 +358,44 @@ p.text > a {
   height: auto;
   border: none;
 }
+
+/* -----------------------------------------------------------
+  table on pioneers page
+   ----------------------------------------------------------- */
+
+
+/* HoltAncestry Table Style */
+.holt-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.holt-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1rem;
+  background: #faf8f4; /* subtle archival tint */
+}
+
+.holt-table td {
+  border: 1px solid #d4cfc7; /* soft archival grey */
+  padding: 8px 12px;
+  line-height: 1.4;
+  vertical-align: top;
+  word-break: break-word;
+}
+
+/* Subtle alternating rows for printed-register feel */
+.holt-table tr:nth-child(even) {
+  background: #f2efea;
+}
+
+/* Mobile optimisation */
+@media (max-width: 600px) {
+  .holt-table td {
+    padding: 6px 8px;
+    font-size: 0.95rem;
+  }
+}
