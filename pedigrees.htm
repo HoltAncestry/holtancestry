@@ -17,13 +17,13 @@ var bullet = [];
 bullet['on']  = new Image(); bullet['on'].src  = "images/shield2.jpg";
 bullet['off'] = new Image(); bullet['off'].src = "images/shield.jpg";
 
-function change(name, state) {
-  document[name].src = bullet[state].src;
+function change(id, state) {
+  document.getElementById(id).src = bullet[state].src;
 }
 </script>
 
 
-<script>console.log("TEST:", document['img9']);</script>
+
 
 
 
@@ -126,7 +126,7 @@ AD1533. Edited by William Langton 1876-1882 2v.
 <a href="pdf/stubleyvisitationoflanc1533.pdf" target="_blank"
    onmouseover="change('img9','on')"
    onmouseout="change('img9','off')">
-  <img name="img9" src="images/shield.jpg"
+  <img id="img9" src="images/shield.jpg"
        alt="Stubley pedigree" width="34" height="40">
 </a>
 
