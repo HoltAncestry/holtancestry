@@ -335,6 +335,17 @@ p.text > a {
   text-decoration: none !important;
 }
 
+/* -----------------------------------------------------------
+   Shield icons: stable layout, no baseline jump
+   ----------------------------------------------------------- */
+.rollover-shield {
+  display: inline-block;
+  vertical-align: middle;
+  width: 34px;
+  height: 40px;
+  margin-right: 6px;
+  border: none;
+}
 
 /* -----------------------------------------------------------
    Gravestones
