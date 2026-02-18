@@ -410,3 +410,14 @@ p.text > a {
     font-size: 0.95rem;
   }
 }
+
+/* -----------------------------------------------------------
+  tagline centre line while keeping the rest of the paragraph left‑aligned
+   ----------------------------------------------------------- */
+
+   .tagline {
+    display: block;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: 600; /* optional */
+}
