@@ -416,27 +416,30 @@ p.text > a {
    ----------------------------------------------------------- */
 
 
-
-/* Allow table headings to wrap (without affecting menu .menutitle) */
-table th .menutitle {
-  white-space: normal;
-  display: block;      /* ensures left alignment applies cleanly */
-  text-align: left;    /* left-align column titles */
+/* Left-align all table headings */
+table th {
+  text-align: left;
 }
 
-/* Improve spacing between columns for readability */
+/* Allow headings to wrap (including .menutitle spans) */
+table th .menutitle {
+  white-space: normal;
+  display: block;
+}
+
+/* Improve spacing between columns */
 table td,
 table th {
   padding-right: 0.6rem;
 }
 
-/* Give the 4th column (Status) a stable width on all tables that have it */
+/* Give the 4th column (Status) a stable width */
 table th:nth-child(4),
 table td:nth-child(4) {
-  width: 8rem;   /* adjust to taste; safe for all pages */
+  width: 8rem;
 }
 
-/* Ensure scroll wrappers behave consistently across pages */
+/* Ensure scroll wrappers behave consistently */
 .table-wrapper,
 div[style*="overflow-x:auto"] {
   overflow-x: auto;
