@@ -411,3 +411,24 @@ p.text > a {
   }
 }
 
+/* -----------------------------------------------------------
+ Unified Table Fixes for all .mobile-friendly tables
+   ----------------------------------------------------------- */
+
+/* Allow column headings to wrap (without affecting menu .menutitle) */
+.mobile-friendly th .menutitle {
+  white-space: normal;
+  display: inline-block;
+}
+
+/* Give the Status column a stable width so it doesn't collapse */
+.mobile-friendly th:nth-child(4),
+.mobile-friendly td:nth-child(4) {
+  width: 8rem; /* adjust to taste */
+}
+
+/* Improve spacing between columns for readability */
+.mobile-friendly td,
+.mobile-friendly th {
+  padding-right: 0.6rem;
+}
