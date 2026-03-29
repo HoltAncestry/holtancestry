@@ -412,23 +412,34 @@ p.text > a {
 }
 
 /* -----------------------------------------------------------
- Unified Table Fixes for all .mobile-friendly tables
+ Unified Table Styling for All Historical Tables .mobile-friendly tables
    ----------------------------------------------------------- */
 
-/* Allow column headings to wrap (without affecting menu .menutitle) */
-.mobile-friendly th .menutitle {
-  white-space: normal;
-  display: inline-block;
-}
 
-/* Give the Status column a stable width so it doesn't collapse */
-.mobile-friendly th:nth-child(4),
-.mobile-friendly td:nth-child(4) {
-  width: 8rem; /* adjust to taste */
+
+/* Allow table headings to wrap (without affecting menu .menutitle) */
+table th .menutitle {
+  white-space: normal;
+  display: block;      /* ensures left alignment applies cleanly */
+  text-align: left;    /* left-align column titles */
 }
 
 /* Improve spacing between columns for readability */
-.mobile-friendly td,
-.mobile-friendly th {
+table td,
+table th {
   padding-right: 0.6rem;
+}
+
+/* Give the 4th column (Status) a stable width on all tables that have it */
+table th:nth-child(4),
+table td:nth-child(4) {
+  width: 8rem;   /* adjust to taste; safe for all pages */
+}
+
+/* Ensure scroll wrappers behave consistently across pages */
+.table-wrapper,
+div[style*="overflow-x:auto"] {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1em 0;
 }
