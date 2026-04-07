@@ -60,6 +60,24 @@ body {
   color: #00FF99;
 }
 
+h3 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #993300;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 a {
+  color: #993300;
+  text-decoration: none;
+}
+
+h3 a:hover {
+  text-decoration: underline;
+}
+
 /* -----------------------------------------------------------
    IMAGES
    ----------------------------------------------------------- */
