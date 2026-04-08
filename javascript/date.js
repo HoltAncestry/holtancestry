@@ -1,41 +1,39 @@
+function getLongDateString() {
+    // Returns: Day DD Month YYYY
+    const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    const dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
-function getLongDateString()
-{	//method defined on class Date.
-	//Returns a date string of the form: Day DD Month,YYYY
-	//(e.g. Sunday 27 September, 1998)
-	monthNames = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
-dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-	dayOfWeek = this.getDay();
-	day = dayNames[dayOfWeek];
-	dateOfMonth = this.getDate();
-monthNo = this.getMonth();
-	month = monthNames[monthNo];
-year = this.getYear();
-	if (year < 2000)
-year = year + 1900;
-dateStr = day+" "+dateOfMonth+" "+month+" "+year;
-	return dateStr;
-}
-//register the  method in the class Date
-Date.prototype.getLongDateString=getLongDateString;
+    const day = dayNames[this.getDay()];
+    const dateOfMonth = this.getDate();
+    const month = monthNames[this.getMonth()];
+    const year = this.getFullYear(); // modern, correct
 
-function DocDate()
-{ //return the document modification date (excl.time)
-//as a string
-	DateTimeStr = document.lastModified;
-	secOffset = Date.parse(DateTimeStr);
-	if (secOffset == 0 || secOffset == null) //Opera3.2
-			 dateStr = "Unknown";
-	else
-	{
-		aDate = new Date();
-		aDate.setTime(secOffset);
-		//use method defined above
-		datestr = aDate.getLongDateString();
-	}
-	return dateStr;
+    return day + " " + dateOfMonth + " " + month + " " + year;
 }
 
+Date.prototype.getLongDateString = getLongDateString;
+
+function DocDate() {
+    // Return document modification date (excl. time)
+    const DateTimeStr = document.lastModified;
+    const secOffset = Date.parse(DateTimeStr);
+
+    if (!secOffset) {
+        return "Unknown";
+    }
+
+    const aDate = new Date(secOffset);
+    return aDate.getLongDateString();
+}
+
+// Write the last updated date
 document.write("Last updated: ");
-document.writeln(DocDate(),"</center>");
- 
+document.writeln(DocDate(), "</center>");
+
+// NEW: Update copyright year automatically
+(function updateCopyrightYear() {
+    const span = document.getElementById("current-year");
+    if (span) {
+        span.textContent = new Date().getFullYear();
+    }
+})();
