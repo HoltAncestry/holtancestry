@@ -1,12 +1,17 @@
 function getLongDateString() {
     // Returns: Day DD Month YYYY
-    const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-    const dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const monthNames = [
+        "January","February","March","April","May","June",
+        "July","August","September","October","November","December"
+    ];
+    const dayNames = [
+        "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
+    ];
 
     const day = dayNames[this.getDay()];
     const dateOfMonth = this.getDate();
     const month = monthNames[this.getMonth()];
-    const year = this.getFullYear(); // modern, correct
+    const year = this.getFullYear();
 
     return day + " " + dateOfMonth + " " + month + " " + year;
 }
@@ -14,7 +19,7 @@ function getLongDateString() {
 Date.prototype.getLongDateString = getLongDateString;
 
 function DocDate() {
-    // Return document modification date (excl. time)
+    // Return the document modification date (excl. time) as a string
     const DateTimeStr = document.lastModified;
     const secOffset = Date.parse(DateTimeStr);
 
@@ -26,14 +31,18 @@ function DocDate() {
     return aDate.getLongDateString();
 }
 
-// Write the last updated date
-document.write("Last updated: ");
-document.writeln(DocDate(), "</center>");
+// --- No more document.write here ---
 
-// NEW: Update copyright year automatically
-(function updateCopyrightYear() {
-    const span = document.getElementById("current-year");
-    if (span) {
-        span.textContent = new Date().getFullYear();
+(function initFooterDates() {
+    // Last updated
+    const lastUpdatedEl = document.getElementById("last-updated");
+    if (lastUpdatedEl) {
+        lastUpdatedEl.textContent = "Last updated: " + DocDate();
+    }
+
+    // Current year
+    const yearEl = document.getElementById("current-year");
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
     }
 })();
