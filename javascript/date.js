@@ -1,37 +1,31 @@
-function getLongDateString() {
-    // Returns: Day DD Month YYYY
+function getShortDateString() {
+    // Returns: DD Month YYYY (no weekday)
     const monthNames = [
         "January","February","March","April","May","June",
         "July","August","September","October","November","December"
     ];
-    const dayNames = [
-        "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
-    ];
 
-    const day = dayNames[this.getDay()];
     const dateOfMonth = this.getDate();
     const month = monthNames[this.getMonth()];
     const year = this.getFullYear();
 
-    return day + " " + dateOfMonth + " " + month + " " + year;
+    return dateOfMonth + " " + month + " " + year;
 }
 
-Date.prototype.getLongDateString = getLongDateString;
+Date.prototype.getShortDateString = getShortDateString;
 
 function DocDate() {
-    // Return the document modification date (excl. time) as a string
-    const DateTimeStr = document.lastModified;
-    const secOffset = Date.parse(DateTimeStr);
+    // Return the document's real last-modified date
+    const raw = document.lastModified;
+    const parsed = Date.parse(raw);
 
-    if (!secOffset) {
+    if (!parsed) {
         return "Unknown";
     }
 
-    const aDate = new Date(secOffset);
-    return aDate.getLongDateString();
+    const d = new Date(parsed);
+    return d.getShortDateString();
 }
-
-// --- No more document.write here ---
 
 (function initFooterDates() {
     // Last updated
