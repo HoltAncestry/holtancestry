@@ -24,7 +24,7 @@
     <a href="sources.htm" class="nav-link">Sources</a>
   </nav>
 </header>
-
+<main class="container">
 <!-- TOP HISTORY BOX -->
 <!-- HISTORY YEAR SECTIONS BLOCK -->
 <div class="container">
@@ -215,29 +215,43 @@ This is a summary in date order of the information contained within. The wills r
 </div>
 
 
-<!-- SIDEBAR -->
-<div class="container">
+  <!-- SIDEBAR content moved below main content on mobile -->
   <aside class="sidebar">
+
     <h2 class="subtitle">Sources</h2>
-    <ul class="sidebar-menu">
-      <li><a href="links.htm" class="menutitle">Links</a></li>
-      <li><a href="sources.htm" class="menutitle">Sources</a></li>
-      <li><a href="reference.htm" class="menutitle">Reference</a></li>
-      <li><a href="contact.htm" class="menutitle">Contact</a></li>
-      <li><a href="sitemap.htm" class="menutitle">Sitemap</a></li>
-    </ul>
+  <p>   
+    <a href="links.htm" class="menutitle">Links</a> |
+    <a href="reference.htm" class="menutitle">Reference</a> |
+    <a href="sources.htm" class="menutitle">Sources</a> |
+    <a href="contact.htm" class="menutitle">Contact</a> |
+    <a href="sitemap.htm" class="menutitle">Sitemap</a>  
+  </p>
 
     <form method="get" action="https://www.google.com/search" class="search-box">
       <input type="text" name="q" placeholder="Search Holt Ancestry">
       <input type="hidden" name="sitesearch" value="holtancestry.co.uk">
       <button type="submit">Search</button>
     </form>
-  </aside>
-</div>
 
-<footer>
-  <p>&copy; HoltAncestry.co.uk</p>
+  </aside>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer text">
+  <p>
+    Copyright © 2003 - <span id="current-year"></span> Victoria Holt.
+    All rights reserved.
+    <a href="mailto:victoria-holt@holtancestry.co.uk">Contact</a> |
+    <a href="sitemap.htm">Site Map</a> |
+    <a href="access.htm">Accessibility</a>
+  </p>
+
+  <p id="last-updated"></p>
+
+  <script src="javascript/date.js"></script>
 </footer>
+
 
 </body>
 </html>	
