@@ -465,3 +465,11 @@ div[style*="overflow-x:auto"] {
   -webkit-overflow-scrolling: touch;
   margin: 1em 0;
 }
+
+/* -----------------------------------------------------------
+Content boxes - light brown e.g manorial page
+   ----------------------------------------------------------- */
+.content-box {
+  padding: 1rem;
+  border-radius: 4px;
+}
