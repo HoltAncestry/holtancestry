@@ -467,9 +467,27 @@ div[style*="overflow-x:auto"] {
 }
 
 /* -----------------------------------------------------------
-Content boxes - light brown e.g manorial page
+Content boxes - light brown e.g manorial page not used in the end i think
    ----------------------------------------------------------- */
 .content-box {
   padding: 1rem;
   border-radius: 4px;
+}
+
+/* -----------------------------------------------------------
+FLOATING BACK TO TOP BUTTON
+   ----------------------------------------------------------- */
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: block;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+  opacity: 1;
 }
