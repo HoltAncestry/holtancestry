@@ -123,45 +123,6 @@ img {
   text-decoration: underline !important;
 }
 
-/* Hamburger button (hidden on desktop) */
-.nav-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #993300; /* matches your palette */
-  margin-right: 1rem;
-}
-
-/* MOBILE MENU BEHAVIOUR */
-@media (max-width: 768px) {
-
-  /* Stack nav vertically on mobile */
-  .main-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-  }
-
-  /* Show the hamburger button */
-  .nav-toggle {
-    display: block;
-  }
-
-  /* Hide links by default */
-  .main-nav .nav-link {
-    display: none;
-    width: 100%;
-    padding: 0.75rem 0;
-  }
-
-  /* When menu is active, show links */
-  .main-nav.active .nav-link {
-    display: block;
-  }
-}
-
 
 /* -----------------------------------------------------------
    LAYOUT CONTAINER
