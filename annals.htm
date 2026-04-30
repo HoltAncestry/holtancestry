@@ -16,6 +16,9 @@
 
 <header>
   <nav class="main-nav">
+<button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+
+
     <a href="index.htm" class="nav-link">Home</a>
     <a href="history.htm" class="nav-link">History</a>
     <a href="wills.htm" class="nav-link">Legacy</a>
@@ -227,6 +230,12 @@ in the social and economic structure of the parish.
 
   <script src="javascript/date.js"></script>
 </footer>
+<!-- Hamberger menu -->
+<script>
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+  document.querySelector('.main-nav').classList.toggle('active');
+});
+</script>
 
 </body>
 </html>
