@@ -10,6 +10,13 @@
 
   <link rel="stylesheet" href="css/master.css?v=3">
   <link rel="shortcut icon" href="favicon.ico">
+  
+<!-- Leaflet CSS for Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Leaflet JS (add near the end of the file, before </body>) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 </head>
 
 <body>
@@ -140,6 +147,42 @@
 </div>
 
 
+<h3>Modern Location - Bridge Hall near Old Bridge Hall, Heap Bridge</h3>
+<p>Bridge Hall Lane, Heap Bridge, Bury, Greater Manchester BL9 7PB</p>
+
+<div id="oldbridge-map" style="height: 480px; width: 100%; max-width: 900px; margin: 15px 0; border: 1px solid #ccc; border-radius: 6px;"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+// Initialize map centered on Old Bridge Hall
+const map = L.map('oldbridge-map').setView([53.59308, -2.26675], 17);
+
+// OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19
+}).addTo(map);
+
+// Marker for Old Bridge Hall
+const marker = L.marker([53.59308, -2.26675]).addTo(map);
+
+marker.bindPopup(`
+    <strong>Old Bridge Hall</strong><br>
+    Bridge Hall Lane, Heap Bridge<br>
+    Bury, Greater Manchester<br>
+    BL9 7PB<br><br>
+    <em>Historic Holt family connection • Original hall demolished</em>
+`).openPopup();
+
+// Optional circle around the hall
+L.circle([53.59308, -2.26675], {
+    color: '#3388ff',
+    fillColor: '#3388ff',
+    fillOpacity: 0.08,
+    radius: 50
+}).addTo(map);
+</script>
 
 <!-- FLOATING BACK TO TOP BUTTON -->
 <a href="#top" class="back-to-top">

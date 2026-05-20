@@ -10,6 +10,12 @@
 
   <link rel="stylesheet" href="css/master.css?v=3">
   <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Leaflet CSS for Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Leaflet JS (add near the end of the file, before </body>) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 
 <body>
@@ -102,6 +108,43 @@
     <img src="images/balderstonemap.jpg" alt="Map of Rochdale South 1908" width="482" height="394" style="display:block;">
   </a>
 </div>
+
+<h3>Modern Location - Balderstone Hall (Site)</h3>
+<p>Balderstone Hall Lane, Balderstone, near Blackburn, Lancashire BB2 7LA</p>
+
+<div id="balderstone-map" style="height: 480px; width: 100%; max-width: 900px; margin: 15px 0; border: 1px solid #ccc; border-radius: 6px;"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+// Initialize map centered on Balderstone Hall Lane area
+const map = L.map('balderstone-map').setView([53.7825, -2.5625], 16);
+
+// OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19
+}).addTo(map);
+
+// Marker for the historic site
+const marker = L.marker([53.7825, -2.5625]).addTo(map);
+
+marker.bindPopup(`
+    <strong>Balderstone Hall (demolished)</strong><br>
+    Balderstone Hall Lane<br>
+    Balderstone, near Blackburn<br>
+    Lancashire BB2 7LA<br><br>
+    <em>Former historic Holt family seat • Now the area of Balderstone Hall Farm</em>
+`).openPopup();
+
+// Optional circle around the historic area
+L.circle([53.7825, -2.5625], {
+    color: '#3388ff',
+    fillColor: '#3388ff',
+    fillOpacity: 0.08,
+    radius: 100
+}).addTo(map);
+</script>
 
 
 <!-- FLOATING BACK TO TOP BUTTON -->
