@@ -10,6 +10,13 @@
 
   <link rel="stylesheet" href="css/master.css?v=3">
   <link rel="shortcut icon" href="favicon.ico">
+
+<!-- Leaflet CSS for Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Leaflet JS (add near the end of the file, before </body>) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 </head>
 
 <body>
@@ -147,6 +154,43 @@
   <img src="images/gristleside.jpg" alt="Gristlehurst Hall side view" width="241" height="300" style="display:block;">
 </div>
 
+<h3>Modern Location - Gristlehurst Hall</h3>
+<p>Gristlehurst Lane, Heywood, Greater Manchester OL10 4BJ</p>
+
+<div id="gristlehurst-map" style="height: 480px; width: 100%; max-width: 900px; margin: 15px 0; border: 1px solid #ccc; border-radius: 6px;"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+// Initialize map centered on Gristlehurst Lane
+const map = L.map('gristlehurst-map').setView([53.6075, -2.2351], 16);
+
+// OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19
+}).addTo(map);
+
+// Marker for Gristlehurst Hall site
+const marker = L.marker([53.6075, -2.2351]).addTo(map);
+
+marker.bindPopup(`
+    <strong>Gristlehurst Hall</strong><br>
+    (Grizlehurst)<br>
+    Gristlehurst Lane<br>
+    Heywood, Greater Manchester<br>
+    OL10 4BJ<br><br>
+    <em>Ancient Holt family seat • Site of archaeological interest</em>
+`).openPopup();
+
+// Optional circle around the area
+L.circle([53.6075, -2.2351], {
+    color: '#3388ff',
+    fillColor: '#3388ff',
+    fillOpacity: 0.08,
+    radius: 100
+}).addTo(map);
+</script>
 
 <!-- FLOATING BACK TO TOP BUTTON -->
 <a href="#top" class="back-to-top">

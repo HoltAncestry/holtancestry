@@ -10,6 +10,12 @@
 
   <link rel="stylesheet" href="css/master.css?v=3">
   <link rel="shortcut icon" href="favicon.ico">
+<!-- Leaflet CSS for Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Leaflet JS (add near the end of the file, before </body>) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 </head>
 
 <body>
@@ -92,7 +98,43 @@ Within the Hall is a window with the holt of Chadwick quarterings. It is in the 
   <img src="images/newhallwindow.jpg" alt="New Hall Window" width="230" height="176" style="display:block;">
 </div>
 
- 
+ <h3>Modern Location - New Hall, Sutton Coldfield</h3>
+<p>Walmley Road, Sutton Coldfield, Birmingham B76 1QX</p>
+
+<div id="newhall-map" style="height: 480px; width: 100%; max-width: 900px; margin: 15px 0; border: 1px solid #ccc; border-radius: 6px;"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+// Initialize map centered on New Hall
+const map = L.map('newhall-map').setView([52.5510, -1.8046], 16);
+
+// OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19
+}).addTo(map);
+
+// Marker for New Hall
+const marker = L.marker([52.5510, -1.8046]).addTo(map);
+
+marker.bindPopup(`
+    <strong>New Hall</strong><br>
+    Walmley Road<br>
+    Sutton Coldfield<br>
+    Birmingham<br>
+    B76 1QX<br><br>
+    <em>Historic Holt family connection • Now New Hall Hotel &amp; Spa</em>
+`).openPopup();
+
+// Optional circle around the hall
+L.circle([52.5510, -1.8046], {
+    color: '#3388ff',
+    fillColor: '#3388ff',
+    fillOpacity: 0.08,
+    radius: 80
+}).addTo(map);
+</script>
 
 <p>
 <span class="subtitle">Mavesyn Ridware</span>

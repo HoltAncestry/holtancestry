@@ -10,6 +10,13 @@
 
   <link rel="stylesheet" href="css/master.css?v=3">
   <link rel="shortcut icon" href="favicon.ico">
+
+<!-- Leaflet CSS for Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Leaflet JS (add near the end of the file, before </body>) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 </head>
 
 <body>
@@ -117,7 +124,42 @@ green spaces, boating lake, and Palm House.
 
 </p>
 
-			
+<h3>Modern Location - Holt House, Sefton Park</h3>
+<p>54 Ullet Road, Sefton Park, Liverpool L17 3AT</p>
+
+<div id="holthouse-map" style="height: 480px; width: 100%; max-width: 900px; margin: 15px 0; border: 1px solid #ccc; border-radius: 6px;"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+// Initialize map centered on Holt House
+const map = L.map('holthouse-map').setView([53.3887, -2.9400], 17);
+
+// OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19
+}).addTo(map);
+
+// Marker for Holt House
+const marker = L.marker([53.3887, -2.9400]).addTo(map);
+
+marker.bindPopup(`
+    <strong>Holt House</strong><br>
+    54 Ullet Road<br>
+    Sefton Park<br>
+    Liverpool L17 3AT<br><br>
+    <em>Grade II Listed Victorian Villa • Holt family connection</em>
+`).openPopup();
+
+// Optional circle around the building
+L.circle([53.3887, -2.9400], {
+    color: '#3388ff',
+    fillColor: '#3388ff',
+    fillOpacity: 0.08,
+    radius: 40
+}).addTo(map);
+</script>			
 
 
 <!-- FLOATING BACK TO TOP BUTTON -->

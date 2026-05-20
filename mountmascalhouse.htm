@@ -10,6 +10,12 @@
 
   <link rel="stylesheet" href="css/master.css?v=3">
   <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Leaflet CSS for Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Leaflet JS (add near the end of the file, before </body>) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 
 <body>
@@ -138,6 +144,42 @@ Holt), with the house featuring gardens, a Chinoiserie summerhouse, and an 18th-
 a private family home and estate.
 </p>
 
+<h3>Modern Location - Orleton Hall, Wellington</h3>
+<p>Haygate Road, Wellington, Telford, Shropshire TF6 5AA</p>
+
+<div id="orleton-map" style="height: 480px; width: 100%; max-width: 900px; margin: 15px 0; border: 1px solid #ccc; border-radius: 6px;"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+// Initialize map centered on Orleton Hall
+const map = L.map('orleton-map').setView([52.6981, -2.5417], 16);
+
+// OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19
+}).addTo(map);
+
+// Marker for Orleton Hall
+const marker = L.marker([52.6981, -2.5417]).addTo(map);
+
+marker.bindPopup(`
+    <strong>Orleton Hall</strong><br>
+    Haygate Road, Wellington<br>
+    Telford, Shropshire<br>
+    TF6 5AA<br><br>
+    <em>Historic Holt family connection</em>
+`).openPopup();
+
+// Optional circle around the hall
+L.circle([52.6981, -2.5417], {
+    color: '#3388ff',
+    fillColor: '#3388ff',
+    fillOpacity: 0.08,
+    radius: 80
+}).addTo(map);
+</script>
 
 <p><span class="menutitle">Holt and Co (of London)</span><br/>
 
