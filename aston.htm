@@ -10,6 +10,13 @@
 
   <link rel="stylesheet" href="css/master.css?v=3">
   <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Leaflet CSS for Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Leaflet JS (add near the end of the file, before </body>) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 </head>
 
 <body>
@@ -127,6 +134,43 @@
 
   
  <p>  <img src="images/astonhouse.jpg" alt="AstonHouse south view" width="630" height="466" ></p>
+
+ <h3>Modern Location - Aston Hall, Birmingham</h3>
+<p>Trinity Road, Aston, Birmingham, B6 6JD</p>
+
+<div id="aston-map" style="height: 480px; width: 100%; max-width: 900px; margin: 15px 0; border: 1px solid #ccc; border-radius: 6px;"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+// Initialize map centered on Aston Hall
+const map = L.map('aston-map').setView([52.5064, -1.8842], 16);
+
+// OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19
+}).addTo(map);
+
+// Marker for Aston Hall
+const marker = L.marker([52.5064, -1.8842]).addTo(map);
+
+marker.bindPopup(`
+    <strong>Aston Hall</strong><br>
+    Trinity Road, Aston<br>
+    Birmingham<br>
+    B6 6JD<br><br>
+    <em>Historic Jacobean mansion of Sir Thomas Holte</em>
+`).openPopup();
+
+// Optional circle around the hall
+L.circle([52.5064, -1.8842], {
+    color: '#3388ff',
+    fillColor: '#3388ff',
+    fillOpacity: 0.08,
+    radius: 80
+}).addTo(map);
+</script>
 
 <!-- FLOATING BACK TO TOP BUTTON -->
 <a href="#top" class="back-to-top">

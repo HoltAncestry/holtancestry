@@ -10,6 +10,13 @@
 
   <link rel="stylesheet" href="css/master.css?v=3">
   <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Leaflet CSS for Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Leaflet JS (add near the end of the file, before </body>) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 </head>
 
 <body>
@@ -116,6 +123,43 @@
        width="398" height="248"
        style="display:block;">
 </div>
+
+<h3>Modern Location - Sudley House, Liverpool</h3>
+<p>Mossley Hill Road, Aigburth, Liverpool, Merseyside L18 8BX</p>
+
+<div id="sudley-map" style="height: 480px; width: 100%; max-width: 900px; margin: 15px 0; border: 1px solid #ccc; border-radius: 6px;"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+// Initialize map centered on Sudley House
+const map = L.map('sudley-map').setView([53.3735, -2.9214], 16);
+
+// OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19
+}).addTo(map);
+
+// Marker for Sudley House
+const marker = L.marker([53.3735, -2.9214]).addTo(map);
+
+marker.bindPopup(`
+    <strong>Sudley House</strong><br>
+    Mossley Hill Road, Aigburth<br>
+    Liverpool, Merseyside<br>
+    L18 8BX<br><br>
+    <em>Home of George Holt • Now a National Museums Liverpool site</em><br>
+   `).openPopup();
+
+// Optional circle around the property
+L.circle([53.3735, -2.9214], {
+    color: '#3388ff',
+    fillColor: '#3388ff',
+    fillOpacity: 0.08,
+    radius: 80
+}).addTo(map);
+</script>
 
 <p class="text">
   Extract from the <i>Mersey Magazine</i> of the Mersey Dock Board, October 1924:
