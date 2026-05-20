@@ -10,6 +10,12 @@
 
   <link rel="stylesheet" href="css/master.css?v=3">
   <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Leaflet JS (add near the end of the file, before </body>) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 
 <body>
@@ -152,6 +158,41 @@
   <img src="images/stubleymap.jpg" alt="Stubley Hall Map 1910" width="404" height="252" style="display:block;">
   <p class="text">Map of Stubley Hall, Littleborough, 1910</p>
 </div>
+
+<h3>Modern Location of Stubley Hall</h3>
+<p>Featherstall Road, Littleborough OL15 8PH</p>
+
+<div id="stubley-map" style="height: 480px; width: 100%; max-width: 900px; margin: 15px 0; border: 1px solid #ccc; border-radius: 6px;"></div>
+
+<script>
+// Initialize map
+const map = L.map('stubley-map').setView([53.6411, -2.1106], 16);
+
+// OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19
+}).addTo(map);
+
+// Marker + popup
+const marker = L.marker([53.6411, -2.1106]).addTo(map);
+
+marker.bindPopup(`
+    <strong>Stubley Old Hall</strong><br>
+    Featherstall Road<br>
+    Littleborough<br>
+    OL15 8PH<br><br>
+    <em>Historic seat of the Holt family since 1330</em>
+`).openPopup();
+
+// Optional light blue circle around the property
+L.circle([53.6411, -2.1106], {
+    color: '#3388ff',
+    fillColor: '#3388ff',
+    fillOpacity: 0.08,
+    radius: 70
+}).addTo(map);
+</script>
 
 <div style="display:flex; flex-wrap:wrap; gap:40px; margin:20px 0;">
   <img src="images/stubleyhallp1.jpg" alt="Stubley Hall" width="318" height="212" style="display:block;">
