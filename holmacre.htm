@@ -10,6 +10,13 @@
 
   <link rel="stylesheet" href="css/master.css?v=3">
   <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Leaflet CSS for Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Leaflet JS (add near the end of the file, before </body>) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 </head>
 
 <body>
@@ -111,8 +118,43 @@ with his wife Elizabeth and family after taking over the brewery in 1882. He rem
 of his life until his death in 1928 at Manchester Royal Infirmary.
 </p>
 
-			
+<h3>Modern Location - Blackwell, The Arts & Crafts House</h3>
+<p>Bowness-on-Windermere, Cumbria LA23 3JT</p>
 
+<div id="blackwell-map" style="height: 480px; width: 100%; max-width: 900px; margin: 15px 0; border: 1px solid #ccc; border-radius: 6px;"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+// Initialize map centered on Blackwell
+const map = L.map('blackwell-map').setView([54.3431, -2.9236], 16);
+
+// OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19
+}).addTo(map);
+
+// Marker for Blackwell
+const marker = L.marker([54.3431, -2.9236]).addTo(map);
+
+marker.bindPopup(`
+    <strong>Blackwell – The Arts & Crafts House</strong><br>
+    Bowness-on-Windermere<br>
+    Cumbria<br>
+    LA23 3JT<br><br>
+    <em>Built for Sir Edward Holt • Iconic Arts & Crafts architecture</em>
+`).openPopup();
+
+// Optional circle around the house
+L.circle([54.3431, -2.9236], {
+    color: '#3388ff',
+    fillColor: '#3388ff',
+    fillOpacity: 0.08,
+    radius: 80
+}).addTo(map);
+</script>			
+<p>Interactive map showing the modern location of the historic Holt property. Zoom and drag to explore.</p>
 
 <!-- FLOATING BACK TO TOP BUTTON -->
 <a href="#top" class="back-to-top">
