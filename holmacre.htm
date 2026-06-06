@@ -164,19 +164,19 @@ L.circle([54.3431, -2.9236], {
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-// Coordinates for Woodthorpe Hotel, Prestwich
-const map = L.map('woodthorpe-map').setView([53.5256, -2.2649], 17);
 
-// OpenStreetMap tiles
+
+// WOODTHORPE MAP
+const woodthorpeMap = L.map('woodthorpe-map').setView([53.5256, -2.2649], 17);
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors',
     maxZoom: 19
-}).addTo(map);
+}).addTo(woodthorpeMap);
 
-// Marker for Woodthorpe Hotel
-const marker = L.marker([53.5256, -2.2649]).addTo(map);
+const woodthorpeMarker = L.marker([53.5256, -2.2649]).addTo(woodthorpeMap);
 
-marker.bindPopup(`
+woodthorpeMarker.bindPopup(`
     <strong>Woodthorpe Hotel</strong><br>
     Bury Old Road<br>
     Prestwich, Manchester<br>
@@ -184,14 +184,14 @@ marker.bindPopup(`
     <em>Historic Holt property • Prestwich estate</em>
 `).openPopup();
 
-// Optional highlight circle
 L.circle([53.5256, -2.2649], {
     color: '#3388ff',
     fillColor: '#3388ff',
     fillOpacity: 0.08,
     radius: 80
-}).addTo(map);
+}).addTo(woodthorpeMap);
 </script>
+
 
 <p>Interactive map showing the modern location of the historic Holt property. Zoom and drag to explore.</p>
 
