@@ -10,7 +10,15 @@
 
   <link rel="stylesheet" href="css/master.css?v=3">
   <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Leaflet CSS for Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Leaflet JS (add near the end of the file, before </body>) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 </head>
+
 
 <body>
 
@@ -144,6 +152,35 @@ ensured the family's enduring legacy amid the transformative smoke and steam of 
   the machinery that powered their livelihoods, creating a life shaped entirely by the demands of the mill.
 </p>
 
+<script>
+// Initialize map
+const map = L.map('holt-town-map').setView([53.4845, -2.2150], 15);
+
+// OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19
+}).addTo(map);
+
+// Optional marker for reference (centre of Holt Town)
+const marker = L.marker([53.4845, -2.2150]).addTo(map);
+marker.bindPopup(`
+    <strong>Holt Town, Manchester</strong><br>
+    Historic industrial district<br>
+    Associated with the Holt family and early textile works
+`).openPopup();
+
+// Circle highlighting the Holt Town area
+L.circle([53.4845, -2.2150], {
+    color: '#3388ff',
+    fillColor: '#3388ff',
+    fillOpacity: 0.08,
+    radius: 600   // adjust radius to cover the full Holt Town area
+}).addTo(map);
+</script>
+
+<p>Interactive map showing the Holt Town district of Manchester, historically linked to the Holt family’s industrial enterprises.</p>
+
 
 <p>
   Holt Town became known as a distinctive enclave within Manchester's expanding industrial sprawl, a place where 
@@ -151,7 +188,8 @@ ensured the family's enduring legacy amid the transformative smoke and steam of 
   been redeveloped, the name Holt Town preserves the memory of David Holt's experiment in industrial planning and the 
   community that grew around his mills.
 </p>
- 
+
+
 <p>
 Grace's Guide a the leading source of historical information on industry and manufacturing in Britain 
 covers the <a href="https://www.gracesguide.co.uk/Holt_Town_Mills,_Manchester" target="_blank"><u>Holt Town Mills</u></a>. 
