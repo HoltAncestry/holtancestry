@@ -485,11 +485,30 @@ div[style*="overflow-x:auto"] {
   opacity: 1;
 }
 
-/* Header layout: nav left, search right */
+/* SEARCH BOX 
+Header layout: nav left, search right */
 .header-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap; /* allows mobile wrapping */
   gap: 1rem;
+}
+
+/* Keep search box small and aligned right */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 260px;        /* keeps it small */
+  flex-shrink: 0;      /* prevents stretching */
+}
+
+.search-box button {
+  padding: 0.4rem 0.8rem;
+  background: #993300;   /* heritage brown */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;    /* optional, looks nicer */
 }
