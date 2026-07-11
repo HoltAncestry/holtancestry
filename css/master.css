@@ -24,9 +24,8 @@ body {
   padding: 0;
   font-family: Verdana, Arial, Helvetica, sans-serif;
   line-height: 1.7;
-  max-width: 1200px;
-  margin: 0 auto;
   -webkit-font-smoothing: antialiased;
+   background: #f7f3ee; /* your original parchment tone */ 
 }
 
 /* Page-level headings */
