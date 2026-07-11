@@ -484,3 +484,12 @@ div[style*="overflow-x:auto"] {
 .back-to-top:hover {
   opacity: 1;
 }
+
+/* Header layout: nav left, search right */
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* allows mobile wrapping */
+  gap: 1rem;
+}
