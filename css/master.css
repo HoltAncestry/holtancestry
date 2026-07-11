@@ -23,8 +23,31 @@ body {
   margin: 0;
   padding: 0;
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  line-height: 1.7;  max-width: 1200px; margin: 0 auto; 
+  line-height: 1.7;
+  max-width: 1200px;
+  margin: 0 auto;
   -webkit-font-smoothing: antialiased;
+}
+
+/* NEW: H1 + H2 hierarchy */
+h1 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  color: #993300;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  color: #993300;
+  margin-top: 1.4rem;
+  margin-bottom: 0.8rem;
 }
 
 .text {
@@ -36,14 +59,16 @@ body {
 .title {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
-  font-weight: bold; letter-spacing: -0.02em;
+  font-weight: bold;
+  letter-spacing: -0.02em;
   color: #993300;
 }
 
 .subtitle {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
-  font-weight: bold; letter-spacing: -0.02em;
+  font-weight: bold;
+  letter-spacing: -0.02em;
   color: #993300;
 }
 
@@ -63,7 +88,8 @@ body {
 h3 {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
-  font-weight: bold; letter-spacing: -0.02em;
+  font-weight: bold;
+  letter-spacing: -0.02em;
   color: #993300;
   margin-top: 1.2rem;
   margin-bottom: 0.5rem;
@@ -77,7 +103,6 @@ h3 a {
 h3 a:hover {
   text-decoration: underline;
 }
-
 
 /* -----------------------------------------------------------
    IMAGES
@@ -122,7 +147,6 @@ img {
   color: #662200 !important;
   text-decoration: underline !important;
 }
-
 
 /* -----------------------------------------------------------
    LAYOUT CONTAINER
@@ -177,12 +201,12 @@ img {
 
 /* Soft parchment background */
 body {
-  background: #f7f3ee; /* warm, archival tone */
+  background: #f7f3ee;
 }
 
 /* Header bar with subtle heritage feel */
 header {
-  background: #f0e8df; /* slightly darker parchment */
+  background: #f0e8df;
   border-bottom: 2px solid #d6c7b8;
   padding: 0.5rem 0;
 }
@@ -239,10 +263,9 @@ footer {
 /* -----------------------------------------------------------
    NEW: HISTORY NAVIGATION BLOCK (Option 1)
    ----------------------------------------------------------- */
-
 .history-nav {
-  background: #faf6f2;          /* parchment tone */
-  border: 1px solid #e0d6cc;     /* heritage border */
+  background: #faf6f2;
+  border: 1px solid #e0d6cc;
   padding: 1.25rem;
   border-radius: 6px;
   margin: 2rem 0;
@@ -259,12 +282,12 @@ footer {
 
 .history-links a {
   padding: 6px 12px;
-  background: #ffffff;          /* white pill */
+  background: #ffffff;
   border: 1px solid #d6c7b4;
   border-radius: 4px;
   text-decoration: none;
   font-size: 0.95rem;
-  color: #8a5a2c;               /* lighter brown */
+  color: #8a5a2c;
 }
 
 .history-links a:hover {
@@ -276,7 +299,6 @@ footer {
 /* -----------------------------------------------------------
    Three Images in a row
    ----------------------------------------------------------- */
-/* --- Three images in a row --- */
 .three-image-row {
   display: flex;
   justify-content: space-between;
@@ -288,7 +310,7 @@ footer {
   flex: 1 1 calc(33.333% - 1rem);
   margin: 0;
   text-align: center;
-  position: relative; /* ensures caption layers correctly */
+  position: relative;
 }
 
 .three-image-row img {
@@ -298,16 +320,14 @@ footer {
   object-fit: cover;
 }
 
-/* Captions must always sit below the image */
 .three-image-row figcaption {
   position: relative;
   z-index: 2;
-  background: white; /* prevents text blending into image */
+  background: white;
   padding-top: 0.5rem;
   font-weight: 600;
 }
 
-/* --- Mobile layout --- */
 @media (max-width: 768px) {
   .three-image-row {
     flex-direction: column;
@@ -328,7 +348,6 @@ footer {
 /* -----------------------------------------------------------
    WILLS (table scrolling on mobile)
    ----------------------------------------------------------- */
-
 .table-scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -336,11 +355,11 @@ footer {
 }
 
 .table-scroll table {
-  min-width: 860px; /* your actual table width */
+  min-width: 860px;
 }
 
 /* -----------------------------------------------------------
-   Shield icons: no baseline gap, small spacing below
+   Shield icons
    ----------------------------------------------------------- */
 a img[src="images/shield.jpg"],
 a img[src="images/shield2.jpg"] {
@@ -355,9 +374,6 @@ p.text > a {
   text-decoration: none !important;
 }
 
-/* -----------------------------------------------------------
-   Shield icons: stable layout, no baseline jump
-   ----------------------------------------------------------- */
 .rollover-shield {
   display: inline-block;
   vertical-align: middle;
@@ -370,7 +386,6 @@ p.text > a {
 /* -----------------------------------------------------------
    Gravestones
    ----------------------------------------------------------- */
-
 .gravestone-row {
   display: flex;
   flex-wrap: wrap;
@@ -391,11 +406,8 @@ p.text > a {
 }
 
 /* -----------------------------------------------------------
-  table on pioneers page
+   Pioneers Table
    ----------------------------------------------------------- */
-
-
-/* HoltAncestry Table Style */
 .holt-table-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -407,23 +419,21 @@ p.text > a {
   border-collapse: collapse;
   font-family: "Georgia", "Times New Roman", serif;
   font-size: 1rem;
-  background: #faf8f4; /* subtle archival tint */
+  background: #faf8f4;
 }
 
 .holt-table td {
-  border: 1px solid #d4cfc7; /* soft archival grey */
+  border: 1px solid #d4cfc7;
   padding: 8px 12px;
   line-height: 1.4;
   vertical-align: top;
   word-break: break-word;
 }
 
-/* Subtle alternating rows for printed-register feel */
 .holt-table tr:nth-child(even) {
   background: #f2efea;
 }
 
-/* Mobile optimisation */
 @media (max-width: 600px) {
   .holt-table td {
     padding: 6px 8px;
@@ -432,34 +442,27 @@ p.text > a {
 }
 
 /* -----------------------------------------------------------
- Unified Table Styling for All Historical Tables .mobile-friendly tables
+   Unified Table Styling
    ----------------------------------------------------------- */
-
-
-/* Left-align all table headings */
 table th {
   text-align: left;
 }
 
-/* Allow headings to wrap (including .menutitle spans) */
 table th .menutitle {
   white-space: normal;
   display: block;
 }
 
-/* Improve spacing between columns */
 table td,
 table th {
   padding-right: 0.6rem;
 }
 
-/* Give the 4th column (Status) a stable width */
 table th:nth-child(4),
 table td:nth-child(4) {
   width: 8rem;
 }
 
-/* Ensure scroll wrappers behave consistently */
 .table-wrapper,
 div[style*="overflow-x:auto"] {
   overflow-x: auto;
@@ -468,17 +471,21 @@ div[style*="overflow-x:auto"] {
 }
 
 /* -----------------------------------------------------------
-Content boxes - light brown e.g manorial page not used in the end i think
+   Content boxes
    ----------------------------------------------------------- */
 .content-box {
   padding: 1rem;
   border-radius: 4px;
 }
 
-/* -----------------------------------------------------------
-FLOATING BACK TO TOP BUTTON
-   ----------------------------------------------------------- */
+/* NEW: Main content spacing */
+.content {
+  padding: 2rem;
+}
 
+/* -----------------------------------------------------------
+   Floating Back to Top Button
+   ----------------------------------------------------------- */
 .back-to-top {
   position: fixed;
   bottom: 20px;
