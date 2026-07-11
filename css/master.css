@@ -29,7 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* NEW: H1 + H2 hierarchy */
+/* Page-level headings */
 h1 {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 2rem;
@@ -154,14 +154,23 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
+  background: #ffffff;
+  border: 1px solid #e0d6cc;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-top: 2rem;
 }
 
 /* -----------------------------------------------------------
-   SIDEBAR (now appears below content on mobile)
+   SIDEBAR
    ----------------------------------------------------------- */
 .sidebar {
-  margin-top: 2rem;
+  margin-top: 3rem;
+  background: #faf6f2;
+  border: 1px solid #e0d6cc;
+  padding: 1.5rem;
+  border-radius: 6px;
 }
 
 .sidebar-menu {
@@ -174,7 +183,7 @@ img {
 }
 
 /* -----------------------------------------------------------
-   SEARCH BOX (modern)
+   SEARCH BOX
    ----------------------------------------------------------- */
 .search-box {
   margin-top: 1rem;
@@ -196,56 +205,18 @@ img {
 }
 
 /* -----------------------------------------------------------
-   HERITAGE MODERN DESIGN LAYER
+   HERITAGE DESIGN LAYER
    ----------------------------------------------------------- */
-
-/* Soft parchment background */
 body {
   background: #f7f3ee;
 }
 
-/* Header bar with subtle heritage feel */
 header {
   background: #f0e8df;
   border-bottom: 2px solid #d6c7b8;
   padding: 0.5rem 0;
 }
 
-/* Navigation refinement */
-.main-nav {
-  gap: 2rem;
-}
-
-.main-nav .nav-link {
-  font-size: 1.15rem;
-  letter-spacing: 0.5px;
-}
-
-/* Main content panel */
-.container {
-  background: #ffffff;
-  padding: 2rem;
-  border: 1px solid #e0d6cc;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  margin-top: 2rem;
-}
-
-/* Sidebar as a heritage card */
-.sidebar {
-  background: #faf6f2;
-  border: 1px solid #e0d6cc;
-  padding: 1.5rem;
-  border-radius: 6px;
-  margin-top: 3rem;
-}
-
-/* Sidebar headings */
-.sidebar .subtitle {
-  margin-bottom: 0.5rem;
-}
-
-/* Footer refinement */
 footer {
   background: #f0e8df;
   border-top: 2px solid #d6c7b8;
@@ -254,14 +225,7 @@ footer {
 }
 
 /* -----------------------------------------------------------
-   SAFE ADDITION: Make all <h2> headings brown (matches Contact page)
-   ----------------------------------------------------------- */
-.container h2 {
-  color: #993300;
-}
-
-/* -----------------------------------------------------------
-   NEW: HISTORY NAVIGATION BLOCK (Option 1)
+   HISTORY NAVIGATION BLOCK
    ----------------------------------------------------------- */
 .history-nav {
   background: #faf6f2;
@@ -297,7 +261,7 @@ footer {
 }
 
 /* -----------------------------------------------------------
-   Three Images in a row
+   THREE IMAGES IN A ROW
    ----------------------------------------------------------- */
 .three-image-row {
   display: flex;
@@ -338,15 +302,10 @@ footer {
     flex: 1 1 100%;
     width: 100%;
   }
-
-  .three-image-row img {
-    width: 100%;
-    height: auto;
-  }
 }
 
 /* -----------------------------------------------------------
-   WILLS (table scrolling on mobile)
+   WILLS TABLE SCROLL
    ----------------------------------------------------------- */
 .table-scroll {
   overflow-x: auto;
@@ -359,7 +318,7 @@ footer {
 }
 
 /* -----------------------------------------------------------
-   Shield icons
+   SHIELD ICONS
    ----------------------------------------------------------- */
 a img[src="images/shield.jpg"],
 a img[src="images/shield2.jpg"] {
@@ -384,7 +343,7 @@ p.text > a {
 }
 
 /* -----------------------------------------------------------
-   Gravestones
+   GRAVESTONES
    ----------------------------------------------------------- */
 .gravestone-row {
   display: flex;
@@ -406,7 +365,7 @@ p.text > a {
 }
 
 /* -----------------------------------------------------------
-   Pioneers Table
+   PIONEERS TABLE
    ----------------------------------------------------------- */
 .holt-table-wrapper {
   width: 100%;
@@ -442,7 +401,7 @@ p.text > a {
 }
 
 /* -----------------------------------------------------------
-   Unified Table Styling
+   UNIFIED TABLE STYLING
    ----------------------------------------------------------- */
 table th {
   text-align: left;
@@ -471,20 +430,46 @@ div[style*="overflow-x:auto"] {
 }
 
 /* -----------------------------------------------------------
-   Content boxes
+   CONTENT BLOCKS
    ----------------------------------------------------------- */
 .content-box {
   padding: 1rem;
   border-radius: 4px;
 }
 
-/* NEW: Main content spacing */
+/* Main content spacing */
 .content {
   padding: 2rem;
 }
 
+/* Major section content spacing */
+.section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+}
+
+/* Captions images, tables, figures) */
+.caption {
+  font-size: 0.9rem;
+  color: #6d3f1f;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Notes / footnotes, archival references */
+.note {
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
 /* -----------------------------------------------------------
-   Floating Back to Top Button
+   BACK TO TOP BUTTON
    ----------------------------------------------------------- */
 .back-to-top {
   position: fixed;
