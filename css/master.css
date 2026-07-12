@@ -495,20 +495,17 @@ Header layout: nav left, search right */
   gap: 1rem;
 }
 
-/* Keep search box small and aligned right */
+/* Allow nav to shrink so search can sit on the same line */
+.main-nav {
+  flex: 1 1 auto;
+}
+
+/* Keep search box compact and aligned right */
 .search-box {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  width: 260px;        /* keeps it small */
-  flex-shrink: 0;      /* prevents stretching */
-}
-
-.search-box button {
-  padding: 0.4rem 0.8rem;
-  background: #993300;   /* heritage brown */
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;    /* optional, looks nicer */
+  width: 260px;
+  flex-shrink: 0;     /* prevents it from shrinking */
+  justify-content: flex-end;
 }
