@@ -523,6 +523,15 @@ Header layout: nav left, search right */
   border-radius: 4px;
 }
 
+.search-box button {
+  padding: 0.4rem 0.8rem;
+  background: #993300;   /* heritage brown */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 /* Remove underline from nav links */
 .main-nav .nav-link {
   text-decoration: none !important;
