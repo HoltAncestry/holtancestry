@@ -492,7 +492,7 @@ Header layout: nav left, search right */
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap; /* allows mobile wrapping */
-  gap: 1rem;
+ 
 }
 
 /* Allow nav to shrink so search can sit on the same line */
@@ -506,6 +506,6 @@ Header layout: nav left, search right */
   align-items: center;
   gap: 0.5rem;
   width: 260px;
-  flex-shrink: 0;     /* prevents it from shrinking */
-  justify-content: flex-end;
+  flex: 0 0 auto;
+  
 }
