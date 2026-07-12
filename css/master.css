@@ -485,14 +485,19 @@ div[style*="overflow-x:auto"] {
   opacity: 1;
 }
 
-/* SEARCH BOX 
+
+/* -----------------------------------------------------------
+  SEARCH BOX 
+   ----------------------------------------------------------- */
+
+
+   /* SEARCH BOX 
 Header layout: nav left, search right */
 .header-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* allows mobile wrapping */
- 
+  flex-wrap: wrap;
 }
 
 /* Allow nav to shrink so search can sit on the same line */
@@ -507,5 +512,28 @@ Header layout: nav left, search right */
   gap: 0.5rem;
   width: 260px;
   flex: 0 0 auto;
-  
+}
+
+/* Search input styling */
+.search-box input[type="text"] {
+  padding: 0.4rem;
+  border: 1px solid #d6c7b8;
+  background: #faf6f2;
+  color: #333;
+  border-radius: 4px;
+}
+
+/* Remove underline from nav links */
+.main-nav .nav-link {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+/* Mobile fixes */
+@media (max-width: 768px) {
+  .search-box {
+    width: 100%;
+    flex: 1 1 100%;
+    justify-content: flex-start;
+  }
 }
