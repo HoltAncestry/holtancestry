@@ -5,6 +5,11 @@ a:link {
   color: #333333;
   text-decoration: underline;
 }
+/*This removes underlines only inside the header*/
+header a {
+  text-decoration: none !important;
+}
+
 
 a:visited {
   color: #333333;
