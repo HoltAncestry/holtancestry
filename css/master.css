@@ -561,8 +561,7 @@ Header layout: nav left, search right */
     justify-content: flex-start;
   }
 }
-/*to remove the faint line entirely*/
-
+/*to ensure no baseline line appears*/
 .main-nav {
   display: flex;
   align-items: center;
