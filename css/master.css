@@ -545,6 +545,22 @@ Header layout: nav left, search right */
   border-radius: 4px;
   cursor: pointer;
 }
+/* new button */
+.search-btn {
+  background: #e67e22;        /* orange */
+  color: #fff;                /* white text */
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;         /* rounded corners */
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;                /* space between icon and text */
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
 
 /* Remove underline from nav links */
 .main-nav .nav-link {
