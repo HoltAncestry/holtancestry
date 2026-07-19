@@ -515,7 +515,11 @@ Header layout: nav left, search right */
   flex: 1 1 auto;   /* keeps layout correct */
 }
 
-
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
 /* Keep search box compact and aligned right */
 .search-box {
