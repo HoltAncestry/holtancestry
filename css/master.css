@@ -503,12 +503,16 @@ Header layout: nav left, search right */
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  padding: 0.5rem 1rem; 
 }
 
 /* Allow nav to shrink so search can sit on the same line */
 .main-nav {
   flex: 1 1 auto;
 }
+
+
+
 
 /* Keep search box compact and aligned right */
 .search-box {
@@ -547,9 +551,15 @@ Header layout: nav left, search right */
 
 /* Mobile fixes */
 @media (max-width: 768px) {
+  .header-bar {
+    padding: 0.5rem 1rem; /* NEW: adds left/right breathing room */
+  }
+
   .search-box {
     width: 100%;
     flex: 1 1 100%;
     justify-content: flex-start;
   }
 }
+
+
