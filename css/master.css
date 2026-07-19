@@ -507,10 +507,13 @@ Header layout: nav left, search right */
 }
 
 /* Allow nav to shrink so search can sit on the same line */
+/*to ensure no baseline line appears*/
 .main-nav {
-  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1 1 auto;   /* keeps layout correct */
 }
-
 
 
 
@@ -561,9 +564,5 @@ Header layout: nav left, search right */
     justify-content: flex-start;
   }
 }
-/*to ensure no baseline line appears*/
-.main-nav {
-  display: flex;
-  align-items: center;
-}
+
 
