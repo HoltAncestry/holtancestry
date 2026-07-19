@@ -506,20 +506,16 @@ Header layout: nav left, search right */
   padding: 0.5rem 1rem; 
 }
 
-/* Allow nav to shrink so search can sit on the same line */
+
 /*to ensure no baseline line appears*/
 .main-nav {
-  display: inline-block;
+  display: flex;
   align-items: center;
   gap: 1rem;
   flex: 1 1 auto;   /* keeps layout correct */
 }
 
-.nav-group {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
+
 
 /* Keep search box compact and aligned right */
 .search-box {
