@@ -509,7 +509,7 @@ Header layout: nav left, search right */
 /* Allow nav to shrink so search can sit on the same line */
 /*to ensure no baseline line appears*/
 .main-nav {
-  display: flex;
+  display: inline-block;
   align-items: center;
   gap: 1rem;
   flex: 1 1 auto;   /* keeps layout correct */
