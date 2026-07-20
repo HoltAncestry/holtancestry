@@ -14,13 +14,13 @@
 
 <body>
 
-<header>
+<header class="site-header">
   <div class="header-bar">
     
-    <!-- Left: Logo & Text Branding -->
+    <!-- Left: Branding (Logo + Text) -->
     <div class="site-branding">
       <a href="index.htm" class="logo-link">
-        <img src="images/logo.jpg" alt="Holt Ancestry Logo" class="logo" width="50" height="50">
+        <img src="images/logo.jpg" alt="Holt Ancestry Logo" class="logo-img" width="50" height="50">
       </a>
       <div class="site-title-group">
         <span class="site-title">Holt Ancestry</span>
@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <!-- Right: Navigation, Search, and Toggle Button -->
+    <!-- Center & Right Actions -->
     <div class="header-actions">
       <!-- Main Navigation Menu -->
       <nav class="main-nav" id="mobileMenu">
@@ -57,6 +57,7 @@
     
   </div>
 </header>
+
 
 
 <main class="container">
@@ -295,6 +296,7 @@ Explore the lineages. Discover the landscapes. Uncover the legacy.
 
   </aside>
 
+
 </main>
 
 <!-- FOOTER -->
@@ -314,11 +316,13 @@ Explore the lineages. Discover the landscapes. Uncover the legacy.
 
 <!-- To let the hamberger menu drop down when clicked -->
 
+
 <script>
   function toggleMenu() {
     var menu = document.getElementById("mobileMenu");
     menu.classList.toggle("active");
   }
 </script>
+
 </body>
 </html>

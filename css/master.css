@@ -126,49 +126,7 @@ img {
 /* ==========================================================================
    GLOBAL HEADER & BRANDING
    ========================================================================== */
-.header-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid #ddd;
-  background-color: #ffffff;
-  position: relative; /* Essential context for absolute mobile menus */
-}
 
-.site-branding {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.logo-link img {
-  display: block;
-  border-radius: 4px;
-}
-
-.site-title-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.site-title {
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: #333333;
-  line-height: 1.2;
-}
-
-.site-subtitle {
-  font-size: 0.85rem;
-  color: #666666;
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
 
 /* -----------------------------------------------------------
    DESKTOP NAVIGATION (modern)
@@ -268,11 +226,7 @@ body {
   background: #f7f3ee;
 }
 
-header {
-  background: #f0e8df;
-  border-bottom: 2px solid #d6c7b8;
-  padding: 0.5rem 0;
-}
+
 
 footer {
   background: #f0e8df;
@@ -639,3 +593,186 @@ div[style*="overflow-x:auto"] {
 }
 
 
+
+
+/* ==========================================================================
+   UNIFIED HEADER & NAVIGATION SYSTEM (FINAL CONSOLIDATION)
+   ========================================================================== */
+.site-header {
+  background-color: #f0e8df; 
+  border-bottom: 2px solid #d6c7b8;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  position: relative; 
+}
+
+/* --- Left Side: Branding Group --- */
+.site-branding {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-link {
+  display: inline-flex;
+  text-decoration: none !important;
+}
+
+.logo-img {
+  display: block;
+  border-radius: 4px;
+  width: 50px;
+  height: 50px;
+}
+
+.site-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-title {
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.35rem;
+  color: #993300; 
+  line-height: 1.2;
+}
+
+.site-subtitle {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 0.85rem;
+  color: #555555;
+}
+
+/* --- Right Side: Actions Container --- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* --- Navigation Links --- */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-nav .nav-link {
+  color: #993300;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 0.5rem;
+  white-space: nowrap; 
+}
+
+.main-nav .nav-link:hover {
+  color: #662200;
+  text-decoration: underline !important;
+}
+
+/* --- Search Box Configuration --- */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  width: 260px;
+}
+
+.search-box input[type="text"] {
+  width: 100%;
+  padding: 0.4rem;
+  border: 1px solid #d6c7b8;
+  background: #faf6f2;
+  color: #333;
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-box button {
+  padding: 0.4rem 0.8rem;
+  background: #993300;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* --- Mobile Menu Button --- */
+.menu-toggle {
+  display: none; 
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #993300;
+  transition: all 0.2s ease;
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT SCALING (Mobile & Tablets)
+   ========================================================================== */
+@media (max-width: 990px) {
+  .menu-toggle {
+    display: flex; 
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    background-color: #f0e8df; 
+    border-bottom: 2px solid #d6c7b8;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+    z-index: 99999;
+    gap: 0.5rem;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .main-nav .nav-link {
+    width: 100%;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid rgba(153, 51, 0, 0.1);
+  }
+}
+
+@media (max-width: 600px) {
+  .site-subtitle {
+    display: none; 
+  }
+  .search-box {
+    width: 160px; 
+  }
+}
