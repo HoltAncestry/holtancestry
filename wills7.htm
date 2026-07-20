@@ -14,32 +14,51 @@
 
 <body>
 
-<header>
-<div class="header-bar"> <!-- for the Search -->
-
-
-	
-  	<!-- Main Navigation -->
-  <nav class="main-nav">
-    <a href="index.htm" class="nav-link">Home</a>
-    <a href="history.htm" class="nav-link">History</a>
-    <a href="wills.htm" class="nav-link">Legacy</a>
-    <a href="annals.htm" class="nav-link">Annals</a>
-    <a href="epochs.htm" class="nav-link">Epochs</a>
-    <a href="sources.htm" class="nav-link">Sources</a>
-  </nav>
-
- 
-
-<!-- Search BOX -->
-    <form method="get" action="https://www.google.com/search" class="search-box">
-      <input type="text" name="q" placeholder="Search Holt Ancestry">
-      <input type="hidden" name="sitesearch" value="holtancestry.co.uk">
-      <button type="submit">SEARCH</button>
-    </form>
+<header class="site-header">
+  <div class="header-bar">
     
-</div>
+    <!-- Left: Site Branding (Logo + Text) -->
+    <div class="site-branding">
+      <a href="index.htm" class="logo-link">
+        <img src="images/logo.jpg" alt="Holt Ancestry Logo" class="logo-img" width="50" height="50">
+      </a>
+      <div class="site-title-group">
+        <span class="site-title">Holt Ancestry</span>
+        <span class="site-subtitle">Lineage & Landscape</span>
+      </div>
+    </div>
+
+    <!-- Center & Right Actions -->
+    <div class="header-actions">
+      <!-- Main Navigation Menu -->
+      <nav class="main-nav" id="mobileMenu">
+        <a href="index.htm" class="nav-link">Home</a>
+        <a href="history.htm" class="nav-link">History</a>
+        <a href="wills.htm" class="nav-link">Legacy</a>
+        <a href="annals.htm" class="nav-link">Annals</a>
+        <a href="epochs.htm" class="nav-link">Epochs</a>
+        <a href="sources.htm" class="nav-link">Sources</a>
+      </nav>
+
+      <!-- Search BOX -->
+      <form method="get" action="https://www.google.com/search" class="search-box">
+        <input type="text" name="q" placeholder="Search Holt Ancestry">
+        <input type="hidden" name="sitesearch" value="holtancestry.co.uk">
+        <button type="submit">SEARCH</button>
+      </form>
+
+      <!-- Hamburger Menu Toggle Button -->
+      <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    
+  </div>
 </header>
+
+
 <main class="container">
 <!-- TOP HISTORY BOX -->
 <!-- HISTORY YEAR SECTIONS BLOCK -->
