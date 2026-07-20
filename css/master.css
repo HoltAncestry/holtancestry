@@ -123,28 +123,70 @@ img {
 .mb-1 { margin-bottom: 1rem; }
 .p-1  { padding: 1rem; }
 
+/* ==========================================================================
+   GLOBAL HEADER & BRANDING
+   ========================================================================== */
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffffff;
+  position: relative; /* Essential context for absolute mobile menus */
+}
+
+.site-branding {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-link img {
+  display: block;
+  border-radius: 4px;
+}
+
+.site-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #333333;
+  line-height: 1.2;
+}
+
+.site-subtitle {
+  font-size: 0.85rem;
+  color: #666666;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 /* -----------------------------------------------------------
-   NAVIGATION (modern)
+   DESKTOP NAVIGATION (modern)
    ----------------------------------------------------------- */
 .main-nav {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid #ddd;
-  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-/* Override global link rules */
 .main-nav .nav-link {
-  color: #993300 !important;
+  color: #993300 !important; /* Heritage brown */
   text-decoration: none !important;
   border-bottom: none !important;
   font-weight: 600;
-  font-size: 1.1rem;
-  padding: 0.5rem 0.75rem;
-  display: inline-block;
+  font-size: 1.05rem;
+  padding: 0.5rem;
+  white-space: nowrap;
 }
 
 .main-nav .nav-link:hover,
@@ -152,6 +194,7 @@ img {
   color: #662200 !important;
   text-decoration: underline !important;
 }
+
 
 /* -----------------------------------------------------------
    LAYOUT CONTAINER
@@ -191,14 +234,20 @@ img {
    SEARCH BOX
    ----------------------------------------------------------- */
 .search-box {
-  margin-top: 1rem;
   display: flex;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.25rem;
+  width: 260px;
 }
 
 .search-box input[type="text"] {
   flex: 1;
   padding: 0.4rem;
+  border: 1px solid #d6c7b8;
+  background: #faf6f2;
+  color: #333;
+  border-radius: 4px;
+  outline: none;
 }
 
 .search-box button {
@@ -206,7 +255,10 @@ img {
   background: #993300;
   color: white;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
 }
 
 /* -----------------------------------------------------------
@@ -496,57 +548,76 @@ div[style*="overflow-x:auto"] {
    ----------------------------------------------------------- */
 
 
-   /* SEARCH BOX 
-Header layout: nav left, search right */
-.header-bar {
-  display: flex;
+
+
+/* ==========================================================================
+   MOBILE HAMBURGER BUTTON
+   ========================================================================== */
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0.5rem 1rem; 
-}
-
-
-/*to ensure no baseline line appears*/
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex: 1 1 auto;   /* keeps layout correct */
-}
-
-
-
-/* Keep search box compact and aligned right */
-.search-box {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  width: 260px;
-  flex: 0 0 auto;
-}
-
-/* Search input styling */
-.search-box input[type="text"] {
-  padding: 0.4rem;
-  border: 1px solid #d6c7b8;
-  background: #faf6f2;
-  color: #333;
-  border-radius: 4px;
-  outline: none;
-  box-shadow: none;
-}
-
-.search-box button {
-  padding: 0.4rem 0.8rem;
-  background: #993300;   /* heritage brown */
-  color: white;
+  width: 24px;
+  height: 18px;
+  background: transparent;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
+  padding: 0;
 }
 
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #993300;
+  transition: all 0.2s ease;
+}
 
+/* ==========================================================================
+   RESPONSIVE DESIGN (Mobile Screens)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex; /* Display burger icon when links run out of room */
+  }
+
+  /* Morph menu container into a drop-down drawer */
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%; /* Sits cleanly directly below header bar */
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    z-index: 9999;
+    gap: 0.5rem;
+  }
+
+  /* Added via Javascript when burger is clicked */
+  .main-nav.active {
+    display: flex;
+  }
+
+  .main-nav .nav-link {
+    width: 100%;
+    padding: 0.65rem 0.5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  /* For very tight small screens, compress search to save space */
+  .search-box {
+    width: 160px;
+  }
+  .site-subtitle {
+    display: none; /* Hide subtitle text if brand clips */
+  }
+}
 
 /* Remove underline from nav links */
 .main-nav .nav-link {
