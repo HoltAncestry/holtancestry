@@ -781,25 +781,23 @@ div[style*="overflow-x:auto"] {
    ANNALS HUB PAGE DESIGN
    ========================================================================== */
 
+/* Layout: image left, text right, perfect alignment */
 .annals-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
-  margin-bottom: 1.4rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1.2rem;
+  align-items: start;
+  margin-bottom: 2rem;
 }
 
-.annals-item .annals-icon {
-  flex-shrink: 0;
-}
-
-.annals-item .annals-title {
-  font-weight: bold;
-  font-size: 1.1rem;
+/* Image keeps original size */
+.annals-icon {
   display: block;
-  margin-bottom: 0.3rem;
 }
 
-.annals-item a {
-  display: inline-block;
-  margin-top: 0.4rem;
+/* Titles as h3 */
+.annals-text h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
