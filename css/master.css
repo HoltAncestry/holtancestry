@@ -785,7 +785,7 @@ div[style*="overflow-x:auto"] {
 .annals-item {
   display: grid;
   grid-template-columns: auto 1fr;
-  column-gap: 1.4rem;
+  column-gap: 1.7rem;
   align-items: start;
   margin-bottom: 2rem;
 }
