@@ -781,8 +781,7 @@ div[style*="overflow-x:auto"] {
    ANNALS HUB PAGE DESIGN
    ========================================================================== */
 
-  
-/* Layout: image left, text right, perfect alignment */
+  /* Layout: image left, text right, perfect alignment */
 .annals-item {
   display: grid;
   grid-template-columns: auto 1fr;
