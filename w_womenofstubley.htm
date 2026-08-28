@@ -240,19 +240,37 @@
           and <a href="https://www.christies.com/en/lot/lot-4941780">Samuel Chetham</a> (1676-1745), of Turton and Castleton,
           Lancashire.</li></b></b></br>
 
-         <img src="images/maryholt1691-1749.jpg" alt="Mrs Chetham (1691-1749), née Mary Holt © 2007 Christie’s Images 
-         Limited" width="512" height="633">
-         </br>
-         Title/Description of Subject Matter: Portrait of a lady, traditionally identified as Mrs Chetham (1691-1749), née Mary Holt </br>
-         Artist/Author/Creator of Subject Matter: Circle of Maria Verelst (Vienna 1680-1744)  </br> 
-         Christie’s Copyright Credit: © 2007 Christie’s Images Limited</br> </br>
+ <!-- Protected image version for two specific Christie’s‑licensed portraits-->         
 
-         <img src="images/samuelchetham1676-1745.jpg" alt="Samuel Chetham (1676-1745) © 2007 Christie’s Images 
-         Limited" width="512" height="631">
-         </br>
-         Title/Description of Subject Matter: Portrait of a gentleman, traditionally identified as Samuel Chetham (1676-1745), of Turton and Castleton </br>
-         Artist/Author/Creator of Subject Matter: Circle of Jonathan Richardson (London 1665-1745) </br> 
-         Christie’s Copyright Credit: © 2007 Christie’s Images Limited</br> </br>
+<img id="mary-holt-img" 
+     src="images/maryholt1691-1749.jpg" 
+     alt="Mrs Chetham (1691-1749), née Mary Holt © 2007 Christie’s Images Limited" 
+     width="512" height="633">
+
+<br>
+Title/Description of Subject Matter: Portrait of a lady, traditionally identified as Mrs Chetham (1691-1749), née Mary Holt <br>
+Artist/Author/Creator of Subject Matter: Circle of Maria Verelst (Vienna 1680-1744) <br>
+Christie’s Copyright Credit: © 2007 Christie’s Images Limited<br><br>
+
+<img id="samuel-chetham-img" 
+     src="images/samuelchetham1676-1745.jpg" 
+     alt="Samuel Chetham (1676-1745) © 2007 Christie’s Images Limited" 
+     width="512" height="631">
+
+<br>
+Title/Description of Subject Matter: Portrait of a gentleman, traditionally identified as Samuel Chetham (1676-1745), of Turton and Castleton <br>
+Artist/Author/Creator of Subject Matter: Circle of Jonathan Richardson (London 1665-1745) <br>
+Christie’s Copyright Credit: © 2007 Christie’s Images Limited<br><br>
+
+<script>
+  document.addEventListener('contextmenu', function (event) {
+    if (event.target.id === 'mary-holt-img' ||
+        event.target.id === 'samuel-chetham-img') {
+      event.preventDefault();
+    }
+  });
+</script>
+
 
 
         When James Holt, the last male Holt of Castleton Hall died in York in 1712, he left behind no sons. Instead of
