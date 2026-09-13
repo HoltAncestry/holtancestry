@@ -1,0 +1,37 @@
+name: OCR PDFs in /pdf
+
+on:
+  push:
+    paths:
+      - "pdf/*.pdf"
+  workflow_dispatch:
+
+jobs:
+  ocr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install OCRmyPDF
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ocrmypdf
+
+      - name: Run OCR on all PDFs
+        run: |
+          for file in pdf/*.pdf; do
+            echo "Processing $file"
+            ocrmypdf --skip-text "$file" "ocr-$file"
+            mv "ocr-$file" "$file"
+          done
+
+      - name: Commit OCR'd PDFs
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add pdf/*.pdf
+          git commit -m "Add OCR text layer to PDFs"
+          git push
+
