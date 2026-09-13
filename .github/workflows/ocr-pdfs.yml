@@ -14,7 +14,7 @@ jobs:
     - name: Install OCRmyPDF and dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y ocrmypdf tesseract-ocr ghostscript qpdf python3-pip
+        sudo apt-get install -y tesseract-ocr ghostscript qpdf python3-pip
         pip install ocrmypdf
 
     - name: Run OCR on PDFs
