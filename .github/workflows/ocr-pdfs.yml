@@ -3,15 +3,16 @@ name: OCR PDFs in /pdf
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   ocr:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository (shallow)
+    - name: Checkout repository
       uses: actions/checkout@v3
-      with:
-        fetch-depth: 1
 
     - name: Install OCRmyPDF and dependencies
       run: |
@@ -37,6 +38,7 @@ jobs:
     - name: Push changes
       run: |
         git push
+
 
 
 
