@@ -20,163 +20,19 @@ function openWindow(winfile)
 }
 </script>
 
-<!-- ROLLOVER IMAGES -->
-<script type="text/javascript">
+<!-- ROLL OVER SCRIPT -->
+<script>
+var bullet = [];
+bullet['on']  = new Image(); bullet['on'].src  = "images/gravestone.jpg";
+bullet['off'] = new Image(); bullet['off'].src = "images/gravestone2.gif";
 
-if (document.images) {
-	bullet = new Array ();
-	bullet[1]= new Image();
-	bullet[1].src = "images/gravestone.jpg";
-	bullet[2]= new Image();
-	bullet[2].src = "images/gravestone2.gif";
-	bullet[3]= new Image();
-	bullet[3].src = "images/gravestone.jpg";
-	bullet[4]= new Image();
-	bullet[4].src = "images/gravestone2.gif";
-	bullet[5]= new Image();
-	bullet[5].src = "images/gravestone.jpg";
-	bullet[6]= new Image();
-	bullet[6].src = "images/gravestone2.gif";
-	bullet[7]= new Image();
-	bullet[7].src = "images/gravestone.jpg";
-	bullet[8]= new Image();
-	bullet[8].src = "images/gravestone2.gif";
-	bullet[9]= new Image();
-	bullet[9].src = "images/gravestone.jpg";
-	bullet[10]= new Image();
-	bullet[10].src = "images/gravestone2.gif";
-	bullet[11]= new Image();
-	bullet[11].src = "images/gravestone.jpg";
-	bullet[12]= new Image();
-	bullet[12].src = "images/gravestone2.gif";
-	bullet[13]= new Image();
-	bullet[13].src = "images/gravestone.jpg";
-	bullet[14]= new Image();
-	bullet[14].src = "images/gravestone2.gif";
-	bullet[15]= new Image();
-	bullet[15].src = "images/gravestone.jpg";
-	bullet[16]= new Image();
-	bullet[16].src = "images/gravestone2.gif";
-	bullet[17]= new Image();
-	bullet[17].src = "images/gravestone.jpg";
-	bullet[18]= new Image();
-	bullet[18].src = "images/gravestone2.gif";
-	bullet[19]= new Image();
-	bullet[19].src = "images/gravestone.jpg";
-	bullet[20]= new Image();
-	bullet[20].src = "images/gravestone2.gif";
-	bullet[21]= new Image();
-	bullet[21].src = "images/gravestone.jpg";
-	bullet[22]= new Image();
-	bullet[22].src = "images/gravestone2.gif";
-	bullet[23]= new Image();
-	bullet[23].src = "images/gravestone.jpg";
-	bullet[24]= new Image();
-	bullet[24].src = "images/gravestone2.gif";
-	bullet[25]= new Image();
-	bullet[25].src = "images/gravestone.jpg";
-	bullet[26]= new Image();
-	bullet[26].src = "images/gravestone2.gif";
-	bullet[27]= new Image();
-	bullet[27].src = "images/gravestone.jpg";
-	bullet[28]= new Image();
-	bullet[28].src = "images/gravestone2.gif";
-	bullet[29]= new Image();
-	bullet[29].src = "images/gravestone.jpg";
-	bullet[30]= new Image();
-	bullet[30].src = "images/gravestone2.gif";
-	bullet[31]= new Image();
-	bullet[31].src = "images/gravestone.jpg";
-	bullet[32]= new Image();
-	bullet[32].src = "images/gravestone2.gif";
-	bullet[33]= new Image();
-	bullet[33].src = "images/gravestone.jpg";
-	bullet[34]= new Image();
-	bullet[34].src = "images/gravestone2.gif";
-	bullet[35]= new Image();
-	bullet[35].src = "images/gravestone.jpg";
-	bullet[36]= new Image();
-	bullet[36].src = "images/gravestone2.gif";
-	bullet[37]= new Image();
-	bullet[37].src = "images/gravestone.jpg";
-	bullet[38]= new Image();
-	bullet[38].src = "images/gravestone2.gif";
-	bullet[39]= new Image();
-	bullet[39].src = "images/gravestone.jpg";
-	bullet[40]= new Image();
-	bullet[40].src = "images/gravestone2.gif";
-	bullet[41]= new Image();
-	bullet[41].src = "images/gravestone.jpg";
-	bullet[42]= new Image();
-	bullet[42].src = "images/gravestone2.gif";
-	bullet[43]= new Image();
-	bullet[43].src = "images/gravestone.jpg";
-	bullet[44]= new Image();
-	bullet[44].src = "images/gravestone2.gif";
-	bullet[45]= new Image();
-	bullet[45].src = "images/gravestone.jpg";
-	bullet[46]= new Image();
-	bullet[46].src = "images/gravestone2.gif";
-	bullet[47]= new Image();
-	bullet[47].src = "images/gravestone.jpg";
-	bullet[48]= new Image();
-	bullet[48].src = "images/gravestone2.gif";
-	bullet[49]= new Image();
-	bullet[49].src = "images/gravestone.jpg";
-	bullet[50]= new Image();
-	bullet[50].src = "images/gravestone2.gif";
-	bullet[51]= new Image();
-	bullet[51].src = "images/gravestone.jpg";
-	bullet[52]= new Image();
-	bullet[52].src = "images/gravestone2.gif";
-	bullet[53]= new Image();
-	bullet[53].src = "images/gravestone.jpg";
-	bullet[54]= new Image();
-	bullet[54].src = "images/gravestone2.gif";
-	bullet[55]= new Image();
-	bullet[55].src = "images/gravestone.jpg";
-	bullet[56]= new Image();
-	bullet[56].src = "images/gravestone2.gif";
-	bullet[57]= new Image();
-	bullet[57].src = "images/gravestone.jpg";
-	bullet[58]= new Image();
-	bullet[58].src = "images/gravestone2.gif";
-	bullet[59]= new Image();
-	bullet[59].src = "images/gravestone.jpg";
-	bullet[60]= new Image();
-	bullet[60].src = "images/gravestone2.gif";
-	bullet[61]= new Image();
-	bullet[61].src = "images/gravestone.jpg";
-	bullet[62]= new Image();
-	bullet[62].src = "images/gravestone2.gif";
-	bullet[63]= new Image();
-	bullet[63].src = "images/gravestone.jpg";
-	bullet[64]= new Image();
-	bullet[64].src = "images/gravestone2.gif";
-	bullet[65]= new Image();
-	bullet[65].src = "images/gravestone.jpg";
-	bullet[66]= new Image();
-	bullet[66].src = "images/gravestone2.gif";
-	bullet[67]= new Image();
-	bullet[67].src = "images/gravestone.jpg";
-	bullet[68]= new Image();
-	bullet[68].src = "images/gravestone2.gif";
-	bullet[69]= new Image();
-	bullet[69].src = "images/gravestone.jpg";
-	bullet[70]= new Image();
-	bullet[70].src = "images/gravestone2.gif";
-	}
-
-	function change(from,to)  {
-		if(document.images)  {
-		document.images[from].src = bullet[to].src;
-		}
-	}
-
-
-
-
+function change(id, state) {
+  document.getElementById(id).src = bullet[state].src;
+}
 </script>
+
+
+
 </head>
 
 <body>
@@ -293,40 +149,45 @@ website may help you find your own connections.
 
   <figure>
     <a href="javascript:openWindow('inscriptions/01b-james-holt.htm')"
-       onmouseover="change('img1',2)" onmouseout="change('img1',1)">
-      <img name="img1" src="images/gravestone.jpg" alt="James Holt and Sophia Holt" width="90" height="100">
+         onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img1" class="rollover-gravestone" src="images/gravestone.jpg" alt="James Holt and Sophia Holt" width="90" height="100">
     </a>
     <figcaption class="text">James Holt<br>and Sophia Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/02b-william-holt.htm')"
-       onmouseover="change('img2',4)" onmouseout="change('img2',3)">
-      <img name="img2" src="images/gravestone.jpg" alt="Henry Cunliffe, James Holt and William Holt" width="90" height="100">
+        onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img2" class="rollover-gravestone" src="images/gravestone.jpg" alt="Henry Cunliffe, James Holt and William Holt" width="90" height="100">
     </a>
     <figcaption class="text">Henry Cunliffe Holt,<br>James Holt<br>and William Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/03b-abraham-holt.htm')"
-       onmouseover="change('img3',6)" onmouseout="change('img3',5)">
-      <img name="img3" src="images/gravestone.jpg" alt="Abraham Holt" width="90" height="100">
+          onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img3" class="rollover-gravestone" src="images/gravestone.jpg" alt="Abraham Holt" width="90" height="100">
     </a>
     <figcaption class="text">Abraham Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/04b-alice-holt.htm')"
-       onmouseover="change('img4',8)" onmouseout="change('img4',7)">
-      <img name="img4" src="images/gravestone.jpg" alt="Alice Holt" width="90" height="100">
+         onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img4" class="rollover-gravestone" src="images/gravestone.jpg" alt="Alice Holt" width="90" height="100">
     </a>
     <figcaption class="text">Alice Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/05b-ann-holt.htm')"
-       onmouseover="change('img5',10)" onmouseout="change('img5',9)">
-      <img name="img5" src="images/gravestone.jpg" alt="Ann Holt" width="90" height="100">
+          onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img5" class="rollover-gravestone" src="images/gravestone.jpg" alt="Ann Holt" width="90" height="100">
     </a>
     <figcaption class="text">Ann Holt</figcaption>
   </figure>
@@ -340,80 +201,90 @@ website may help you find your own connections.
 
   <figure>
     <a href="javascript:openWindow('inscriptions/11b-thomas-holt.htm')"
-       onmouseover="change('img11',22)" onmouseout="change('img11',21)">
-      <img name="img11" src="images/gravestone.jpg" alt="Thomas Holt" width="90" height="100">
+          onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img11" class="rollover-gravestone" src="images/gravestone.jpg" alt="Thomas Holt" width="90" height="100">
     </a>
     <figcaption class="text">Thomas Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/12b-thomas-holt.htm')"
-       onmouseover="change('img12',24)" onmouseout="change('img12',23)">
-      <img name="img12" src="images/gravestone.jpg" alt="Thomas Holt" width="90" height="100">
+         onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img12" class="rollover-gravestone" src="images/gravestone.jpg" alt="Thomas Holt" width="90" height="100">
     </a>
     <figcaption class="text">Thomas Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/13b-robert-holt.htm')"
-       onmouseover="change('img13',26)" onmouseout="change('img13',25)">
-      <img name="img13" src="images/gravestone.jpg" alt="Robert Holt" width="90" height="100">
+          onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img13"  class="rollover-gravestone" src="images/gravestone.jpg" alt="Robert Holt" width="90" height="100">
     </a>
     <figcaption class="text">Robert Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/14b-robert-holt.htm')"
-       onmouseover="change('img14',28)" onmouseout="change('img14',27)">
-      <img name="img14" src="images/gravestone.jpg" alt="Robert Holt" width="90" height="100">
+         onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img14" class="rollover-gravestone" src="images/gravestone.jpg" alt="Robert Holt" width="90" height="100">
     </a>
     <figcaption class="text">Robert Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/15b-richard-holt.htm')"
-       onmouseover="change('img15',30)" onmouseout="change('img15',29)">
-      <img name="img15" src="images/gravestone.jpg" alt="Richard Holt" width="90" height="100">
+        onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img15" class="rollover-gravestone" src="images/gravestone.jpg" alt="Richard Holt" width="90" height="100">
     </a>
     <figcaption class="text">Richard Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/16b-robert-holt.htm')"
-       onmouseover="change('img16',32)" onmouseout="change('img16',31)">
-      <img name="img16" src="images/gravestone.jpg" alt="Robert Holt" width="90" height="100">
+   onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img16" class="rollover-gravestone" src="images/gravestone.jpg" alt="Robert Holt" width="90" height="100">
     </a>
     <figcaption class="text">Robert Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/17b-john-holt.htm')"
-       onmouseover="change('img17',34)" onmouseout="change('img17',33)">
-      <img name="img17" src="images/gravestone.jpg" alt="John Holt" width="90" height="100">
+      onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img17" class="rollover-gravestone" src="images/gravestone.jpg" alt="John Holt" width="90" height="100">
     </a>
     <figcaption class="text">John Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/18b-john-holt.htm')"
-       onmouseover="change('img18',36)" onmouseout="change('img18',35)">
-      <img name="img18" src="images/gravestone.jpg" alt="John Holt" width="90" height="100">
+         onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img18"  class="rollover-gravestone" src="images/gravestone.jpg" alt="John Holt" width="90" height="100">
     </a>
     <figcaption class="text">John Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/19b-john-holt.htm')"
-       onmouseover="change('img19',38)" onmouseout="change('img19',37)">
-      <img name="img19" src="images/gravestone.jpg" alt="John Holt" width="90" height="100">
+    onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img19" class="rollover-gravestone" src="images/gravestone.jpg" alt="John Holt" width="90" height="100">
     </a>
     <figcaption class="text">John Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/20b-joseph-holt.htm')"
-       onmouseover="change('img20',40)" onmouseout="change('img20',39)">
-      <img name="img20" src="images/gravestone.jpg" alt="Joseph Holt" width="90" height="100">
+       onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img20" class="rollover-gravestone" src="images/gravestone.jpg" alt="Joseph Holt" width="90" height="100">
     </a>
     <figcaption class="text">Joseph Holt</figcaption>
   </figure>
@@ -424,40 +295,45 @@ website may help you find your own connections.
 
   <figure>
     <a href="javascript:openWindow('inscriptions/21b-nacey-holt.htm')"
-       onmouseover="change('img21',42)" onmouseout="change('img21',41)">
-      <img name="img21" src="images/gravestone.jpg" alt="Nacey Holt" width="90" height="100">
+   onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img21"  class="rollover-gravestone" src="images/gravestone.jpg" alt="Nacey Holt" width="90" height="100">
     </a>
     <figcaption class="text">Nacey Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/22b-edmund-holt.htm')"
-       onmouseover="change('img22',44)" onmouseout="change('img22',43)">
-      <img name="img22" src="images/gravestone.jpg" alt="Edmund Holt" width="90" height="100">
+      onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img22" class="rollover-gravestone" src="images/gravestone.jpg" alt="Edmund Holt" width="90" height="100">
     </a>
     <figcaption class="text">Edmund Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/23b-charles-holt.htm')"
-       onmouseover="change('img23',46)" onmouseout="change('img23',45)">
-      <img name="img23" src="images/gravestone.jpg" alt="Charles Holt" width="90" height="100">
+   onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img23" class="rollover-gravestone" src="images/gravestone.jpg" alt="Charles Holt" width="90" height="100">
     </a>
     <figcaption class="text">Charles Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/24b-daniel-holt.htm')"
-       onmouseover="change('img24',48)" onmouseout="change('img24',47)">
-      <img name="img24" src="images/gravestone.jpg" alt="Daniel Holt" width="90" height="100">
+        onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img24" class="rollover-gravestone" src="images/gravestone.jpg" alt="Daniel Holt" width="90" height="100">
     </a>
     <figcaption class="text">Daniel Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/25b-jane-holt.htm')"
-       onmouseover="change('img25',50)" onmouseout="change('img25',49)">
-      <img name="img25" src="images/gravestone.jpg" alt="Jane Holt" width="90" height="100">
+        onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img25" class="rollover-gravestone" src="images/gravestone.jpg" alt="Jane Holt" width="90" height="100">
     </a>
     <figcaption class="text">Jane Holt</figcaption>
   </figure>
@@ -468,40 +344,45 @@ website may help you find your own connections.
 
   <figure>
     <a href="javascript:openWindow('inscriptions/06b-charles-holt.htm')"
-       onmouseover="change('img6',12)" onmouseout="change('img6',11)">
-      <img name="img6" src="images/gravestone.jpg" alt="Charles Holt" width="90" height="100">
+          onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img6" class="rollover-gravestone" src="images/gravestone.jpg" alt="Charles Holt" width="90" height="100">
     </a>
     <figcaption class="text">Charles Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/07b-edmund-holt.htm')"
-       onmouseover="change('img7',14)" onmouseout="change('img7',13)">
-      <img name="img7" src="images/gravestone.jpg" alt="Edmund Holt" width="90" height="100">
+      onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img7" class="rollover-gravestone" src="images/gravestone.jpg" alt="Edmund Holt" width="90" height="100">
     </a>
     <figcaption class="text">Edmund Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/08b-esther-holt.htm')"
-       onmouseover="change('img8',16)" onmouseout="change('img8',15)">
-      <img name="img8" src="images/gravestone.jpg" alt="Esther Holt" width="90" height="100">
+       onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img8" class="rollover-gravestone" src="images/gravestone.jpg" alt="Esther Holt" width="90" height="100">
     </a>
     <figcaption class="text">Esther Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/09b-john-holt.htm')"
-       onmouseover="change('img9',18)" onmouseout="change('img9',17)">
-      <img name="img9" src="images/gravestone.jpg" alt="John Holt" width="90" height="100">
+     onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img9" class="rollover-gravestone" src="images/gravestone.jpg" alt="John Holt" width="90" height="100">
     </a>
     <figcaption class="text">John Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/10b-thomas-holt.htm')"
-       onmouseover="change('img10',20)" onmouseout="change('img10',19)">
-      <img name="img10" src="images/gravestone.jpg" alt="Thomas Holt" width="90" height="100">
+       onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img10" class="rollover-gravestone" src="images/gravestone.jpg" alt="Thomas Holt" width="90" height="100">
     </a>
     <figcaption class="text">Thomas Holt</figcaption>
   </figure>
@@ -513,80 +394,90 @@ website may help you find your own connections.
 
   <figure>
     <a href="javascript:openWindow('inscriptions/26b-james-holt.htm')"
-       onmouseover="change('img26',52)" onmouseout="change('img26',51)">
-      <img name="img26" src="images/gravestone.jpg" alt="James Holt" width="90" height="100">
+       onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img26" class="rollover-gravestone" src="images/gravestone.jpg" alt="James Holt" width="90" height="100">
     </a>
     <figcaption class="text">James Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/27b-elizabeth-holt.htm')"
-       onmouseover="change('img27',54)" onmouseout="change('img27',53)">
-      <img name="img27" src="images/gravestone.jpg" alt="Elizabeth Holt" width="90" height="100">
+       onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img27" class="rollover-gravestone" src="images/gravestone.jpg" alt="Elizabeth Holt" width="90" height="100">
     </a>
     <figcaption class="text">Elizabeth Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/28b-mally-holt.htm')"
-       onmouseover="change('img28',56)" onmouseout="change('img28',55)">
-      <img name="img28" src="images/gravestone.jpg" alt="Mally Holt" width="90" height="100">
+        onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img28" class="rollover-gravestone" src="images/gravestone.jpg" alt="Mally Holt" width="90" height="100">
     </a>
     <figcaption class="text">Mally Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/29b-william-holt.htm')"
-       onmouseover="change('img29',58)" onmouseout="change('img29',57)">
-      <img name="img29" src="images/gravestone.jpg" alt="William Holt" width="90" height="100">
+        onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img29" class="rollover-gravestone" src="images/gravestone.jpg" alt="William Holt" width="90" height="100">
     </a>
     <figcaption class="text">William Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/30b-robert-holt.htm')"
-       onmouseover="change('img30',60)" onmouseout="change('img30',59)">
-      <img name="img30" src="images/gravestone.jpg" alt="Robert Holt" width="90" height="100">
+         onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img30" class="rollover-gravestone" src="images/gravestone.jpg" alt="Robert Holt" width="90" height="100">
     </a>
     <figcaption class="text">Robert Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/31b-john-holt.htm')"
-       onmouseover="change('img31',62)" onmouseout="change('img31',61)">
-      <img name="img31" src="images/gravestone.jpg" alt="John Holt" width="90" height="100">
+     onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img31" class="rollover-gravestone" src="images/gravestone.jpg" alt="John Holt" width="90" height="100">
     </a>
     <figcaption class="text">John Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/32b-johanna-holt.htm')"
-       onmouseover="change('img32',64)" onmouseout="change('img32',63)">
-      <img name="img32" src="images/gravestone.jpg" alt="Johanna Holt" width="90" height="100">
+       onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img32" class="rollover-gravestone" src="images/gravestone.jpg" alt="Johanna Holt" width="90" height="100">
     </a>
     <figcaption class="text">Johanna Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/33b-francis-holt.htm')"
-       onmouseover="change('img33',66)" onmouseout="change('img33',65)">
-      <img name="img33" src="images/gravestone.jpg" alt="Francis Holt" width="90" height="100">
+       onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img33" class="rollover-gravestone" src="images/gravestone.jpg" alt="Francis Holt" width="90" height="100">
     </a>
     <figcaption class="text">Francis Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/34b-holt.htm')"
-       onmouseover="change('img34',68)" onmouseout="change('img34',67)">
-      <img name="img34" src="images/gravestone.jpg" alt="Holt" width="90" height="100">
+      onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img34" class="rollover-gravestone" src="images/gravestone.jpg" alt="Holt" width="90" height="100">
     </a>
     <figcaption class="text">Holt</figcaption>
   </figure>
 
   <figure>
     <a href="javascript:openWindow('inscriptions/35b-ann-holt.htm')"
-       onmouseover="change('img35',70)" onmouseout="change('img35',69)">
-      <img name="img35" src="images/gravestone.jpg" alt="Ann Holt" width="90" height="100">
+       onmouseover="change('img1','on')"
+   onmouseout="change('img1','off')">
+      <img id="img35" class="rollover-gravestone" src="images/gravestone.jpg" alt="Ann Holt" width="90" height="100">
     </a>
     <figcaption class="text">Ann Holt</figcaption>
   </figure>
